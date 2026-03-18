@@ -55,8 +55,9 @@ export default function Contact() {
           <div className="space-y-12">
             <motion.div
               initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             >
               <h1 className="font-display text-7xl md:text-8xl leading-tight tracking-tighter mb-8">
                 Let's build<br />
@@ -69,8 +70,9 @@ export default function Contact() {
 
             <motion.div 
               initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8"
             >
               <div className="flex items-start gap-6">
@@ -116,8 +118,9 @@ export default function Contact() {
           {/* Right Column: Form */}
           <motion.div
             initial={{ x: 20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="bg-white dark:bg-zinc-900/50 p-8 md:p-12 rounded-[2rem] border border-primary/5 dark:border-white/5 shadow-sm"
           >
             {status === 'success' ? (

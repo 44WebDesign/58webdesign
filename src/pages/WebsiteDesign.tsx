@@ -64,16 +64,19 @@ export default function WebsiteDesign() {
           className="border-b border-primary/10 dark:border-white/10"
         >
           <div className="relative aspect-video lg:aspect-[21/9] overflow-hidden bg-zinc-100 dark:bg-zinc-900">
-            <motion.img 
+            <motion.video 
               initial={{ scale: 1.2 }}
               whileInView={{ scale: 1 }}
               transition={{ duration: 1.5 }}
               viewport={{ once: true }}
-              src="/webdesign.jpg" 
-              alt="Web project mockup" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline 
               className="w-full h-full object-cover grayscale-[20%]"
-              referrerPolicy="no-referrer"
-            />
+            >
+              <source src="/headerbg.mp4" type="video/mp4" />
+            </motion.video>
           </div>
         </motion.section>
 

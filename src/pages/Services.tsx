@@ -8,28 +8,28 @@ const services = [
     title: 'Digital Strategy', 
     slug: 'digital-strategy',
     intro: "Data-driven roadmaps designed to amplify your brand's reach and impact in a crowded digital landscape.",
-    image: '/digitalstratergy.jpg' 
+    image: 'https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
   { 
     id: '02', 
     title: 'Visual Identity', 
     slug: 'visual-identity',
     intro: 'Creating timeless brand design packages and systems that communicate your values at a glance across all media.',
-    image: '/visualidentity.jpg' 
+    image: 'https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
   { 
     id: '03', 
     title: 'Promo Videos', 
     slug: 'promo-videos',
     intro: "High-impact storytelling that captures your brand's essence and engages your audience through motion.",
-    image: '/promovideo.jpg' 
+    image: 'https://images.unsplash.com/photo-1764162051475-992cc7346073?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
   { 
     id: '04', 
     title: 'Content Production', 
     slug: 'content-production',
     intro: 'Professional image generation and copywriting that tells your story with clarity and style.',
-    image: '/contentproduction.jpg' 
+    image: 'https://images.unsplash.com/photo-1676287567295-135ce512839a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
 ];
 

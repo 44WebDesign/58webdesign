@@ -7,31 +7,31 @@ const services = [
     id: '01', 
     title: 'Website Design', 
     desc: 'Bespoke digital experiences that convert visitors into loyal customers.',
-    image: '/webdesign.jpg' 
+    image: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
   { 
     id: '02', 
     title: 'Digital Strategy', 
     desc: 'Data-driven roadmaps designed to amplify your brand\'s reach and impact.',
-    image: '/digitalstratergy.jpg' 
+    image: 'https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
   { 
     id: '03', 
     title: 'Visual Identity', 
     desc: 'Timeless brand systems that communicate your values at a glance.',
-    image: '/visualidentity.jpg' 
+    image: 'https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
   { 
     id: '04', 
     title: 'Promo Videos', 
     desc: 'High-impact storytelling that captures your brand\'s essence through motion.',
-    image: '/promovideo.jpg' 
+    image: 'https://images.unsplash.com/photo-1764162051475-992cc7346073?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
   { 
     id: '05', 
     title: 'Content Production', 
     desc: 'Professional image generation and copywriting that tells your story with style.',
-    image: '/contentproduction.jpg' 
+    image: 'https://images.unsplash.com/photo-1676287567295-135ce512839a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
 ];
 
@@ -179,12 +179,15 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-2/3">
               <div className="overflow-hidden rounded-2xl aspect-[4/3] bg-zinc-100 dark:bg-zinc-900">
-                <img 
-                  src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=60&w=600&auto=format&fit=crop" 
-                  alt="Aura Digital" 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
+                  <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline 
+            className="w-full h-full object-cover"
+          >
+            <source src="public/Go_Kart_Video_Clip.mp4" type="video/mp4" />
+          </video>
               </div>
             </div>
             <div className="w-full md:w-1/3 space-y-6">
@@ -203,19 +206,22 @@ export default function Home() {
           <div className="flex flex-col md:flex-row-reverse gap-16 items-center">
             <div className="w-full md:w-2/3">
               <div className="overflow-hidden rounded-2xl aspect-[4/3] bg-zinc-100 dark:bg-zinc-900">
-                <img 
-                  src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=60&w=600&auto=format&fit=crop" 
-                  alt="Nova Growth" 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
+               <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline 
+            className="w-full h-full object-cover"
+          >
+            <source src="public/Beer_Showcase_Video_For_Brewery.mp4" type="video/mp4" />
+          </video>
               </div>
             </div>
             <div className="w-full md:w-1/3 space-y-6">
-              <span className="text-xs uppercase tracking-[0.3em] font-medium opacity-50">Digital Strategy / 2023</span>
-              <h3 className="font-display text-5xl">Nova Growth</h3>
+              <span className="text-xs uppercase tracking-[0.3em] font-medium opacity-50">Promo Video / 2026</span>
+              <h3 className="font-display text-5xl">Mr Bees Brewery</h3>
               <p className="text-primary/60 dark:text-white/60 font-light leading-relaxed">
-                Strategic market positioning and comprehensive digital roadmap for a fast-scaling tech startup.
+                Eye catching and great quality, the video has helped reach new audiences and relate to a new demographic on social media.
               </p>
               <Link to="/portfolio" className="inline-flex items-center gap-2 group text-sm uppercase tracking-widest font-medium border-b border-primary dark:border-white pb-2">
                 View Case Study

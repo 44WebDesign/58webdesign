@@ -57,7 +57,7 @@ export default function VisualIdentity() {
               whileInView={{ scale: 1 }}
               transition={{ duration: 1.5 }}
               viewport={{ once: true }}
-              src="/visualidentity.jpg" 
+              src="https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
               alt="Visual Identity" 
               className="w-full h-full object-cover grayscale-[20%]"
               referrerPolicy="no-referrer"

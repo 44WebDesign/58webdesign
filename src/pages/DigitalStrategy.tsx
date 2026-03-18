@@ -57,7 +57,7 @@ export default function DigitalStrategy() {
               whileInView={{ scale: 1 }}
               transition={{ duration: 1.5 }}
               viewport={{ once: true }}
-              src="/digitalstratergy.jpg" 
+              src="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
               alt="Digital Strategy" 
               className="w-full h-full object-cover grayscale-[20%]"
               referrerPolicy="no-referrer"

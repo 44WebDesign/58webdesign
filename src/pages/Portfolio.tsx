@@ -3,91 +3,174 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Star, X, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const projects = [
+interface Project {
+  id: string;
+  title: string;
+  category: string;
+  image: string;
+  videoUrl?: string;
+  desc: string;
+  content: string;
+  type: 'image' | 'video';
+  websiteUrl?: string;
+}
+
+const projects: Project[] = [
   {
     id: '01',
     title: 'Euan Stephenson Racing',
-    category: 'Website Design',
-    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&h=1000&auto=format&fit=crop',
+    category: 'Web Design',
+    image: 'https://euan-stephenson-racing.vercel.app/hero-bg-2.jpg',
     desc: 'A high-performance digital platform for a local up and coming racing driver.',
     content: 'We designed and developed a bespoke website for Euan Stephenson Racing, focusing on aesthetics and sponsor lead generation. The platform features a high-impact design that captures the speed and precision of racing, while providing a professional space for potential sponsors to connect.',
     type: 'image',
     websiteUrl: 'https://euanstephensonracing.com'
   },
   {
-    id: '02',
-    title: 'Nova Growth',
-    category: 'Digital Strategy',
-    image: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=800&h=1000&auto=format&fit=crop',
-    desc: 'Strategic market positioning for a tech startup.',
-    content: 'Our digital strategy for Nova Growth involved deep market research and competitor analysis. We developed a comprehensive roadmap that included SEO optimization, content strategy, and social media integration, resulting in a 150% increase in organic traffic within the first six months.',
-    type: 'image',
-    websiteUrl: 'https://novagrowth.io'
+    id: '2',
+    title: 'Mr Bees Brewery',
+    category: 'Promo Video',
+    image: '',
+    videoUrl: 'public/Beer_Showcase_Video_For_Brewery.mp4',
+    desc: 'Engaging promo video for a local brewery business.',
+    content: 'We created a user engaging promo video suitable for all media however with a main focus on social media. Eye catching and great quality, the video has helped reach new audiences and relate to a new demographic on social media.',
+    type: 'video',
   },
   {
     id: '03',
-    title: 'Stellar Branding',
-    category: 'Visual Identity',
-    image: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=800&h=1000&auto=format&fit=crop',
-    desc: 'Minimalist identity system for a creative studio.',
-    content: 'We created a timeless visual identity for Stellar Branding, including a custom logo, typography, and color palette. The goal was to communicate their creative excellence and attention to detail across all touchpoints, from digital assets to physical stationery.',
+    title: 'Rise Digitial Marketing',
+    category: 'Web Design, Visual Identity',
+    image: 'https://www.risedigitalmarketing.co.uk/images/theme-pics/Websites-Page.jpg',
+    desc: 'Minimalist identity system for a digital marketing company.',
+    content: 'We created a timeless visual identity for Rise Digital, including a custom logo, typography, and color palette. The goal was to communicate their online excellence and attention to detail across all touchpoints, from digital assets to physical stationery.',
     type: 'image',
-    websiteUrl: 'https://stellarbranding.co'
+    websiteUrl: 'https://www.risedigitalmarketing.co.uk/'
   },
   {
     id: '04',
-    title: 'Pulse Motion',
-    category: 'Promo Videos',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&h=1000&auto=format&fit=crop',
-    desc: 'Cinematic brand storytelling for an athletic apparel brand.',
-    content: 'For Pulse Motion, we produced a series of high-impact promo videos that capture the energy and passion of their brand. Using cinematic techniques and dynamic editing, we created content that resonates with their target audience and drives engagement across social platforms.',
+    title: 'Tinx Boutique',
+    category: 'Web Design, Online Store',
+    image: 'https://tinxboutique.co.uk/wp-content/uploads/2022/03/men2.jpeg',
+    desc: 'High product count online store with stock tracking.',
+    content: 'For Tinx Boutique, we produced a eye catching design for an online store. We managed the addition of a high number products utilising the best techniques to minimise the time and remove all errors. The system features, stock control, supplier ordering and more.',
     type: 'image',
-    websiteUrl: 'https://pulsemotion.com'
+    websiteUrl: 'https://tinxboutique.co.uk/'
   },
   {
     id: '05',
-    title: 'Zenith Systems',
-    category: 'Visual Identity',
-    image: 'https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=800&h=1000&auto=format&fit=crop',
-    desc: 'A futuristic design system for a global tech conglomerate.',
-    content: 'Zenith Systems required a visual identity that felt both established and forward-thinking. We developed a modular logo system and a vibrant color palette that scales across their diverse product range, ensuring brand consistency in every market.',
+    title: 'Bulloughs Cleaning Services',
+    category: 'Web Design, Visual Identity',
+    image: 'https://bullough.co.uk/images/theme-pics/parallax/parallax-1.jpg',
+    desc: 'Comprehensive Rebrand and Website Redesign.',
+    content: 'We partnered with Bulloughs Cleaning Services to modernise their brand and digital presence. Their existing website was outdated and missing key information such as accreditations, gender pay gap reporting, and company values.',
     type: 'image',
-    websiteUrl: 'https://zenithsystems.tech'
+    websiteUrl: 'https:/https://bullough.co.uk'
   },
   {
     id: '06',
-    title: 'Flux Media',
-    category: 'Promo Videos',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&h=1000&auto=format&fit=crop',
-    desc: 'Dynamic motion graphics for a digital-first news outlet.',
-    content: 'We created a series of energetic promo videos for Flux Media, utilizing bold motion graphics and fast-paced editing. The content was designed to grab attention in social feeds and communicate complex news stories with clarity and speed.',
+    title: 'Kelly Worrall Marketing',
+    category: 'Web Design',
+    image: 'https://kellyworrall.co.uk/wp-content/uploads/2021/06/KW-30.jpg',
+    desc: 'Image and artwork heavy web design for a digital marketing company.',
+    content: 'Kelly had a particular look and feel that she was after for her website which be delivered. A self image heavy design was unique but ended with great results, helping her potential clients realise the professionalism and capability of her services. ',
     type: 'image',
-    websiteUrl: 'https://fluxmedia.net'
+    websiteUrl: 'https://kellyworrall.co.uk/'
   },
   {
     id: '07',
-    title: 'Orbit Agency',
-    category: 'Digital Strategy',
-    image: 'https://images.unsplash.com/photo-1583321500900-82807e458f3c?q=80&w=800&h=1000&auto=format&fit=crop',
-    desc: 'Strategic growth roadmap for a boutique travel agency.',
-    content: 'Our work with Orbit Agency focused on redefining their digital presence to attract high-end travelers. We implemented a data-driven strategy that optimized their conversion funnel and increased their direct booking rate by 85%.',
-    type: 'image',
-    websiteUrl: 'https://orbitagency.travel'
+    title: 'GlobexFM',
+    category: 'Promo Clips',
+    image: '',
+    videoUrl: 'public/globexfm.mp4',
+    desc: 'Intro for a business event video shown to thousands .',
+    content: 'GlobexFM were hosting a large business clip for which a long form video had been produced. Globex came to 58WebDesign for a intro clip to this video which portrayed GlobexFM as a business that has access and reputation wthin their industry.',
+    type: 'video',
   },
   {
     id: '08',
-    title: 'Catalyst Web',
-    category: 'Website Design',
-    image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=800&h=1000&auto=format&fit=crop',
-    desc: 'A minimalist, high-conversion site for a software consultancy.',
-    content: 'Catalyst Web needed a site that reflected their technical precision. We built a minimalist, lightning-fast platform that prioritizes information hierarchy and clear calls to action, resulting in a significant boost in lead generation.',
+    title: 'Modcon Design',
+    category: 'Web Design',
+    image: 'https://www.modcondesign.com/images/theme-pics/4.jpg',
+    desc: 'Brand-New Website for a Start-Up.',
+    content: 'ModCon came to us as a brand-new start-up with no online presence. They needed a visually appealing, professional website that would not only attract customers but also meet the approval standards required by regional and national tender companies. We designed and built a new website from scratch that aligned with industry expectations and positioned ModCon as a credible, high-quality contractor.',
     type: 'image',
-    websiteUrl: 'https://catalystweb.dev'
+    websiteUrl: 'https://www.modcondesign.com/'
+  },
+  {
+    id: '09',
+    title: 'Belle So Chic',
+    category: 'Web Design, Visual Identity',
+    image: 'https://bellesochic.com/wp-content/uploads/2024/07/image00006.jpeg',
+    desc: 'Website Creation Focused on User Experience and Centralised Brand Presence.',
+    content: 'Belle So Chic, a beauty and lifestyle influencer with over half a million Instagram followers, previously relied solely on her social media platforms to engage with her audience. With no website or centralised space, followers struggled to find product links, brand collaborations, and curated recommendations in one place. She wanted a modern, stylish website where all her content, links, and information could be accessed seamlessly from one hub.',
+    type: 'image',
+    websiteUrl: 'https://bellesochic.com'
+  },
+  {
+    id: '10',
+    title: 'Sett Mortgages',
+    category: 'Web Design, Built in Apps',
+    image: 'https://www.settmortgages.co.uk/images/theme-pics/parallax/parallax-6.jpg',
+    desc: 'Website Redesign with Bespoke Mortgage Calculator.',
+    content: 'Sett Mortgages, a Leeds-based mortgage advisor specialising in first-time buyers, needed a website overhaul. Their previous site was overly content-heavy and difficult to navigate. The goal was to simplify the site and its services while adding a bespoke mortgage calculator for users to easily calculate their monthly repayments.',
+    type: 'image',
+    websiteUrl: 'https://www.settmortgages.co.uk'
+  },
+  {
+    id: '11',
+    title: 'Beauty by Rebekah',
+    category: 'Web Design, Online Store',
+    image: 'https://beautybyrebekah.co.uk/cdn/shop/files/dermablading.jpg',
+    desc: 'Website Redesign & Migration to Shopify.',
+    content: 'Beauty by Rebekah needed a fresh, modern website after her WordPress site became outdated, difficult to navigate, and hard to update. We redesigned her entire website and migrated everything to Shopify to create a user-friendly, visually appealing, and easy-to-manage online presence.',
+    type: 'image',
+    websiteUrl: 'https://beautybyrebekah.co.uk'
+  },
+  {
+    id: '12',
+    title: 'Parlour4Pooches',
+    category: 'Web Design, Visual Identity, Digital Stratergy',
+    image: 'https://parlour4pooches.co.uk/wp-content/uploads/2022/05/home1.png',
+    desc: 'Local dog groomer looking to create an online presence.',
+    content: 'Parlour4Pooches reached out for help in creating an online footprint starting from the ground up. Branding, a website and a social media stratergy plan was put in place to attract business, specifically in the local area.',
+    type: 'image',
+    websiteUrl: 'https://parlour4pooches.co.uk/'
+  },
+  {
+    id: '13',
+    title: 'Modcon Design',
+    category: 'Web Design',
+    image: 'https://www.modcondesign.com/images/theme-pics/4.jpg',
+    videoUrl: '/Video_Generation_Complete.mp4',
+    desc: 'Brand-New Website for a Start-Up.',
+    content: 'ModCon came to us as a brand-new start-up with no online presence. They needed a visually appealing, professional website that would not only attract customers but also meet the approval standards required by regional and national tender companies. We designed and built a new website from scratch that aligned with industry expectations and positioned ModCon as a credible, high-quality contractor.',
+    type: 'video',
+    websiteUrl: 'https://www.modcondesign.com/'
+  },
+  {
+    id: '14',
+    title: 'LBWP',
+    category: 'Web Design',
+    image: 'https://www.lbwp.co.uk/images/theme-pics/parallax/parallax-21.jpg',
+    desc: 'Modernising and Enhancing Existing Website.',
+    content: 'LBWP needed a website overhaul to make it more user-friendly, less content-heavy, and safer for users in crisis. The main goal was to ensure that users could quickly access help and exit the site safely if needed. We also integrated Google Translate to accommodate non-English speakers and added a donate button for fundraising.',
+    type: 'image',
+    websiteUrl: 'https://www.lbwp.co.uk/'
+  },
+  {
+    id: '15',
+    title: 'Newmans Store',
+    category: 'Visual Identity, Digital Stratergy, Promo Videos',
+    image: 'https://newmans.store/wp-content/uploads/2025/09/image-asset.webp',
+    desc: 'Attracting customers in a highly competitve online space.',
+    content: 'Newmans required assistance in breaking into a saturated online market. Through the use of eye catching promo videos, a data driven digital stratergy and a rebrand on all media, we helped achieve significant growth in sales.',
+    type: 'image',
+    websiteUrl: 'https://newmans.store'
   }
 ];
 
 export default function Portfolio() {
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <motion.div 
@@ -143,12 +226,25 @@ export default function Portfolio() {
               onClick={() => setSelectedProject(project)}
             >
               <div className="relative overflow-hidden bg-zinc-100 dark:bg-zinc-900">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
+                {project.type === 'video' && project.videoUrl ? (
+                  <video 
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={project.image}
+                    className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  >
+                    <source src={project.videoUrl} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                )}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-4 text-center">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-white/60 mb-1">{project.category}</span>
                   <h3 className="font-display text-xl text-white leading-tight">{project.title}</h3>
@@ -197,15 +293,17 @@ export default function Portfolio() {
                   </div>
 
                   <div className="overflow-hidden bg-zinc-100 dark:bg-zinc-800 aspect-video w-full">
-                    {selectedProject.type === 'video' ? (
+                    {selectedProject.type === 'video' && selectedProject.videoUrl ? (
                       <video 
-                        src={selectedProject.videoUrl} 
                         autoPlay 
                         loop 
                         muted 
                         playsInline 
+                        poster={selectedProject.image}
                         className="w-full h-full object-cover"
-                      />
+                      >
+                        <source src={selectedProject.videoUrl} type="video/mp4" />
+                      </video>
                     ) : (
                       <img 
                         src={selectedProject.image} 
