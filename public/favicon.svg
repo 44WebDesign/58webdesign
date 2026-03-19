@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap');
+    text {
+      font-family: 'Instrument Serif', serif;
+      font-size: 75px;
+      fill: #1a1a1a;
+    }
+    @media (prefers-color-scheme: dark) {
+      text {
+        fill: #F9F9F9;
+      }
+    }
+  </style>
+  <text x="50" y="75" text-anchor="middle" letter-spacing="-0.05em">58</text>
+</svg>
