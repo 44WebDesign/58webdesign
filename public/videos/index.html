@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Video Showcase | 58WebDesign</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Instrument Serif"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1a1a1a',
+                        'background-light': '#F9F9F9',
+                        'background-dark': '#0A0A0A',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #F9F9F9;
+            color: #1a1a1a;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Video Grid Layout */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .video-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .video-item {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: #f0f0f0;
+            aspect-ratio: 16/9;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .video-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+        .video-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 40%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        .video-item:hover .video-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="w-full px-8 py-6 flex justify-center items-center border-b border-primary/5 bg-background-light">
+        <div class="flex items-center gap-2">
+            <span class="font-display text-4xl tracking-[-0.12em] text-primary">58</span>
+            <span class="text-[10px] uppercase tracking-[0.3em] font-medium text-primary/70">WebDesign</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-12 px-6 max-w-[1600px] mx-auto w-full">
+        <div class="space-y-8">
+            
+            <!-- Header -->
+            <div class="text-center space-y-2">
+                <h1 class="font-display text-5xl md:text-7xl tracking-tighter leading-[0.9]">
+                    Promo Video <span class="italic opacity-80 text-4xl md:text-6xl">Showcase.</span>
+                </h1>
+            </div>
+
+            <!-- Video Grid -->
+            <div id="video-grid" class="video-grid pt-8">
+                <!-- Videos will be injected here -->
+                <div id="loader" class="col-span-full text-center py-20 opacity-40 uppercase tracking-widest text-xs">
+                    Loading videos...
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-8 text-center border-t border-primary/5">
+        <p class="text-[10px] uppercase tracking-[0.3em] opacity-40 font-medium">
+            &copy; 2026 58WebDesign. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        async function loadVideos() {
+            const grid = document.getElementById('video-grid');
+            const loader = document.getElementById('loader');
+            
+            console.log('Starting to load videos...');
+            
+            try {
+                // Fetch from the new API endpoint
+                const apiUrl = `/api/videos?t=${new Date().getTime()}`;
+                console.log(`Fetching videos from API: ${apiUrl}`);
+                
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error(`Failed to load video API: ${response.status} ${response.statusText}`);
+                }
+                
+                const videos = await response.json();
+                console.log(`API response received. Found ${videos.length} videos.`);
+                
+                if (videos.length === 0) {
+                    grid.innerHTML = `
+                        <div class="col-span-full text-center py-20 space-y-4">
+                            <div class="opacity-40 uppercase tracking-widest text-xs">No videos found.</div>
+                            <div class="text-xs text-primary/30 max-w-md mx-auto">
+                                If you are using Google Drive, please ensure your API Key and Folder ID are correct in the AI Studio Secrets panel.
+                            </div>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Clear loader
+                grid.innerHTML = '';
+
+                videos.forEach(videoItem => {
+                    // Create card element
+                    const item = document.createElement('div');
+                    item.className = 'video-item group cursor-pointer';
+                    
+                    item.innerHTML = `
+                        <video 
+                            class="w-full h-full block"
+                            autoplay 
+                            muted 
+                            loop 
+                            playsinline
+                            preload="auto"
+                        >
+                            <source src="${videoItem.url}#t=0.1" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay"></div>
+                    `;
+                    
+                    // Ensure video plays
+                    const video = item.querySelector('video');
+                    video.play().catch(e => console.log('Autoplay blocked or failed:', e));
+                    
+                    // Add click handler to toggle controls/sound
+                    item.addEventListener('click', () => {
+                        const video = item.querySelector('video');
+                        if (video.hasAttribute('controls')) {
+                            video.removeAttribute('controls');
+                            video.muted = true;
+                        } else {
+                            video.setAttribute('controls', 'true');
+                            video.muted = false;
+                            video.play();
+                        }
+                    });
+
+                    grid.appendChild(item);
+                });
+
+            } catch (error) {
+                console.error('Error loading videos:', error);
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-20 space-y-4">
+                        <div class="text-red-500 uppercase tracking-widest text-xs font-bold">Error loading videos</div>
+                        <div class="text-[10px] text-primary/40 bg-zinc-100 p-4 rounded-lg max-w-lg mx-auto overflow-auto font-mono text-left">
+                            ${error.message}
+                        </div>
+                        <button onclick="location.reload()" class="mt-4 text-[10px] uppercase tracking-widest font-bold border-b border-primary/20 hover:border-primary transition-colors">
+                            Try Refreshing
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize
+        loadVideos();
+    </script>
+
+</body>
+</html>
