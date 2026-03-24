@@ -19,7 +19,7 @@ export default function Footer({ hideContactSection = false }: FooterProps) {
     setStatus('loading');
 
     try {
-      const response = await fetch('https://formspree.io/f/ben@58webdesign.co.uk', {
+      const response = await fetch('https://formspree.io/f/mkoqdebb', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
