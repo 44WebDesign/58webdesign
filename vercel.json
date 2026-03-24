@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "functions": {
+    "api/*.ts": {
+      "runtime": "nodejs20.x",
+      "includeFiles": "public/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.ts"
+    },
+    {
+      "source": "/drive-video/(.*)",
+      "destination": "/api/index.ts"
+    },
+    {
+      "source": "/videos",
+      "destination": "/videos/index.html"
+    },
+    {
+      "source": "/clients",
+      "destination": "/clients/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "cleanUrls": true
+}

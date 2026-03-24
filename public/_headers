@@ -1,0 +1,8 @@
+/drive-video/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+  Content-Type: video/mp4
+
+/api/*
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json

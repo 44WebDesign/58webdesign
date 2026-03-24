@@ -1,0 +1,7 @@
+name = "58webdesign"
+pages_build_output_dir = "dist"
+
+[vars]
+# Add your environment variables here for local development
+# GOOGLE_API_KEY = "your_api_key"
+# GOOGLE_DRIVE_FOLDER_ID = "your_folder_id"
