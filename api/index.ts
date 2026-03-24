@@ -113,6 +113,7 @@ app.get('/api/videos', async (req, res) => {
     const rawFolderId = process.env.GOOGLE_DRIVE_FOLDER_ID?.trim() || '';
     const currentFolderId = extractFolderId(rawFolderId);
     
+    let videos: any[] = [];
     let driveError = null;
     let folderVerification = null;
 
