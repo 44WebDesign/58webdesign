@@ -9,9 +9,27 @@ const publicDir = path.join(process.cwd(), 'public');
 
 function extractFolderId(input: string): string {
     if (!input) return '';
+    // Handle full URL
     const match = input.match(/\/folders\/([a-zA-Z0-9_-]+)/);
     if (match) return match[1];
-    return input.trim().split('?')[0].split('/').pop() || input.trim();
+    // Handle ID with potential query params or trailing slashes
+    const clean = input.trim().split('?')[0].replace(/\/$/, '');
+    const parts = clean.split('/');
+    return parts[parts.length - 1] || clean;
+}
+
+async function verifyFolderAccess(folderId: string, apiKey: string): Promise<{ success: boolean, name?: string, error?: string }> {
+    try {
+        const url = `https://www.googleapis.com/drive/v3/files/${folderId}?fields=id,name&key=${apiKey}`;
+        const response = await fetchWithTimeout(url);
+        const data: any = await response.json();
+        if (data.error) {
+            return { success: false, error: data.error.message };
+        }
+        return { success: true, name: data.name };
+    } catch (error: any) {
+        return { success: false, error: error.message };
+    }
 }
 
 async function fetchWithTimeout(url: string, timeout = 15000): Promise<Response> {
@@ -95,15 +113,21 @@ app.get('/api/videos', async (req, res) => {
     const rawFolderId = process.env.GOOGLE_DRIVE_FOLDER_ID?.trim() || '';
     const currentFolderId = extractFolderId(rawFolderId);
     
-    let videos = [];
     let driveError = null;
+    let folderVerification = null;
 
     if (currentApiKey && currentFolderId && currentApiKey !== 'undefined' && currentFolderId !== 'undefined') {
-        const result = await fetchAllVideosFromDrive(currentFolderId, currentApiKey);
-        videos = result.videos;
-        driveError = result.error;
+        folderVerification = await verifyFolderAccess(currentFolderId, currentApiKey);
         
-        if (videos.length === 0) {
+        if (folderVerification.success) {
+            const result = await fetchAllVideosFromDrive(currentFolderId, currentApiKey);
+            videos = result.videos;
+            driveError = result.error;
+        } else {
+            driveError = `Folder Access Failed: ${folderVerification.error}`;
+        }
+        
+        if (videos.length === 0 && !driveError) {
             console.log('[API] No videos found in Drive, falling back to local.');
             videos = getLocalVideos();
         }
@@ -123,6 +147,7 @@ app.get('/api/videos', async (req, res) => {
                 publicDirExists: fs.existsSync(publicDir),
                 publicDirPath: publicDir
             },
+            folderVerification,
             driveError,
             videosCount: videos.length,
             videos: videos.slice(0, 5) // Show first 5 for debugging
