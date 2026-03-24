@@ -10,10 +10,11 @@ const publicDir = path.join(process.cwd(), 'public');
 function extractFolderId(input: string): string {
     if (!input) return '';
     const match = input.match(/\/folders\/([a-zA-Z0-9_-]+)/);
-    return match ? match[1] : input.trim();
+    if (match) return match[1];
+    return input.trim().split('?')[0].split('/').pop() || input.trim();
 }
 
-async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response> {
+async function fetchWithTimeout(url: string, timeout = 15000): Promise<Response> {
     const controller = new AbortController();
     const id = setTimeout(() => controller.abort(), timeout);
     try {
@@ -26,14 +27,20 @@ async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response>
     }
 }
 
-async function fetchAllVideosFromDrive(currentFolderId: string, currentApiKey: string, depth = 0): Promise<any[]> {
-    if (depth > 2) return [];
+async function fetchAllVideosFromDrive(currentFolderId: string, currentApiKey: string, depth = 0): Promise<{ videos: any[], error?: string }> {
+    if (depth > 2) return { videos: [] };
     let allVideos: any[] = [];
     try {
         const query = encodeURIComponent(`'${currentFolderId}' in parents and mimeType contains 'video/' and trashed = false`);
         const url = `https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name,mimeType)&key=${currentApiKey}`;
         const filesResponse = await fetchWithTimeout(url);
         const filesData: any = await filesResponse.json();
+        
+        if (filesData.error) {
+            console.error(`[API] Google Drive API Error (Folder ${currentFolderId}):`, filesData.error);
+            return { videos: [], error: filesData.error.message || JSON.stringify(filesData.error) };
+        }
+
         if (filesData.files) {
             const folderVideos = filesData.files.map((file: any) => ({
                 name: file.name,
@@ -41,28 +48,34 @@ async function fetchAllVideosFromDrive(currentFolderId: string, currentApiKey: s
             }));
             allVideos = [...allVideos, ...folderVideos];
         }
+
         if (allVideos.length < 50) {
             const folderQuery = encodeURIComponent(`'${currentFolderId}' in parents and mimeType = 'application/vnd.google-apps.folder' and trashed = false`);
             const folderUrl = `https://www.googleapis.com/drive/v3/files?q=${folderQuery}&fields=files(id,name)&key=${currentApiKey}`;
             const foldersResponse = await fetchWithTimeout(folderUrl);
             const foldersData: any = await foldersResponse.json();
+            
             if (!foldersData.error && foldersData.files && foldersData.files.length > 0) {
                 for (const folder of foldersData.files.slice(0, 5)) {
-                    const subfolderVideos = await fetchAllVideosFromDrive(folder.id, currentApiKey, depth + 1);
-                    allVideos = [...allVideos, ...subfolderVideos];
+                    const result = await fetchAllVideosFromDrive(folder.id, currentApiKey, depth + 1);
+                    allVideos = [...allVideos, ...result.videos];
                     if (allVideos.length >= 100) break;
                 }
             }
         }
-    } catch (error) {
-        console.error(`[API] Error fetching from folder ${currentFolderId}:`, error);
+        return { videos: allVideos };
+    } catch (error: any) {
+        console.error(`[API] Fetch Error (Folder ${currentFolderId}):`, error);
+        return { videos: [], error: error.message || String(error) };
     }
-    return allVideos;
 }
 
 function getLocalVideos() {
     try {
-        if (!fs.existsSync(publicDir)) return [];
+        if (!fs.existsSync(publicDir)) {
+            console.warn('[API] Public directory not found at:', publicDir);
+            return [];
+        }
         const files = fs.readdirSync(publicDir);
         return files
             .filter(file => file.toLowerCase().endsWith('.mp4'))
@@ -77,18 +90,45 @@ function getLocalVideos() {
 }
 
 app.get('/api/videos', async (req, res) => {
+    const debug = req.query.debug === 'true';
     const currentApiKey = (process.env.GOOGLE_API_KEY || process.env.API_KEY || process.env.GEMINI_API_KEY)?.trim();
     const rawFolderId = process.env.GOOGLE_DRIVE_FOLDER_ID?.trim() || '';
     const currentFolderId = extractFolderId(rawFolderId);
+    
     let videos = [];
+    let driveError = null;
+
     if (currentApiKey && currentFolderId && currentApiKey !== 'undefined' && currentFolderId !== 'undefined') {
-        videos = await fetchAllVideosFromDrive(currentFolderId, currentApiKey);
+        const result = await fetchAllVideosFromDrive(currentFolderId, currentApiKey);
+        videos = result.videos;
+        driveError = result.error;
+        
         if (videos.length === 0) {
+            console.log('[API] No videos found in Drive, falling back to local.');
             videos = getLocalVideos();
         }
     } else {
+        console.log('[API] Drive credentials missing, using local videos.');
         videos = getLocalVideos();
     }
+
+    if (debug) {
+        res.setHeader('Cache-Control', 'no-store, max-age=0');
+        return res.json({
+            config: {
+                hasApiKey: !!currentApiKey,
+                apiKeyPrefix: currentApiKey ? currentApiKey.substring(0, 5) + '...' : null,
+                hasFolderId: !!currentFolderId,
+                folderId: currentFolderId,
+                publicDirExists: fs.existsSync(publicDir),
+                publicDirPath: publicDir
+            },
+            driveError,
+            videosCount: videos.length,
+            videos: videos.slice(0, 5) // Show first 5 for debugging
+        });
+    }
+
     for (let i = videos.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [videos[i], videos[j]] = [videos[j], videos[i]];
