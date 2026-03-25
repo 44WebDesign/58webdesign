@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en-GB"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#cc0000",
+                        "secondary": "#003366",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>AutoServe | Professional MOT &amp; Vehicle Servicing</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<div class="p-1.5 rounded-lg bg-primary">
+<span class="material-symbols-outlined text-white text-2xl">directions_car</span>
+</div>
+<h1 class="text-2xl font-black tracking-tight dark:text-white uppercase text-secondary">AutoServe</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" href="#">MOT</a>
+<a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="hidden sm:flex bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-5 py-2.5 rounded-lg font-bold text-sm items-center gap-2 hover:bg-slate-200 transition-all">
+<span class="material-symbols-outlined text-lg">call</span>
+                        01234 567 890
+                    </button>
+<button class="text-white px-6 py-2.5 rounded-lg font-bold text-sm uppercase tracking-wide hover:opacity-90 transition-all shadow-lg shadow-primary/20">
+                        Book an MOT
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section with Integrated Booking Form -->
+<section class="relative min-h-[700px] flex items-center py-16 overflow-hidden bg-secondary">
+<div class="absolute inset-0 opacity-20" data-alt="Close up of modern car engine parts" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwQgQJU-8AhUWSe4u3rF9STZAFEeX3WGzp4JYqWTtCDLYCyiNjJvpsukjOh0IxNPn1jPVUEx05dVzhU5fV9KTQ1HdggvxaeN56hx8-G3fndsriMSnuuw6ah9OgUD0zCQy2EATJuV87wwfIkWgjTTntbsLYi5qMtcmYz5ClYpiKq3zgg8gwwdYG7Mj_tSxBwZ45JnUtdSqspdtKvvIHOnbFzV88KowZl4ejFbLatNAnV5Vh0uvaMTifpPI99FX8KNfJVoVNIvPL9FEW'); background-size: cover; background-position: center;"></div>
+<div class="absolute inset-0 bg-gradient-to-r via-primary/80 to-transparent from-secondary"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+<div class="text-white">
+<span class="inline-block bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">Trust your vehicle with the experts</span>
+<h2 class="text-5xl md:text-7xl font-black leading-[1.1] mb-6 tracking-tighter">
+                        FAST. RELIABLE. <br/><span class="underline decoration-4 underline-offset-8">GUARANTEED.</span>
+</h2>
+<p class="text-lg md:text-xl text-slate-200 mb-8 max-w-lg leading-relaxed">
+                        The ultimate destination for MOT testing, full servicing, and precision repairs in the heart of the UK.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-3 bg-white/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="font-bold">DVSA Approved Center</span>
+</div>
+<div class="flex items-center gap-3 bg-white/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="font-bold">Same-Day Results</span>
+</div>
+</div>
+</div>
+<!-- Vertical Booking Form -->
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
+<div class="mb-6">
+<h3 class="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Book Your MOT Test</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium">Secure your slot in less than 60 seconds.</p>
+</div>
+<form class="space-y-4">
+<div>
+<label class="block text-xs font-black uppercase text-slate-500 mb-1">Vehicle Registration</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg py-3 px-4 font-black text-xl tracking-widest uppercase focus:border-primary focus:ring-0 transition-all" placeholder="ENTER REG" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-black uppercase text-slate-500 mb-1">Select Date</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg py-3 px-4 font-bold text-slate-900 dark:text-white focus:border-primary focus:ring-0" type="date"/>
+</div>
+<div>
+<label class="block text-xs font-black uppercase text-slate-500 mb-1">Select Time</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg py-3 px-4 font-bold text-slate-900 dark:text-white focus:border-primary focus:ring-0">
+<option>09:00 AM</option>
+<option>11:00 AM</option>
+<option>02:00 PM</option>
+<option>04:00 PM</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-black uppercase text-slate-500 mb-1">Contact Email</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg py-3 px-4 font-medium text-slate-900 dark:text-white focus:border-primary focus:ring-0" placeholder="your@email.com" type="email"/>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-lg font-black uppercase tracking-widest hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-primary/30 mt-2" type="submit">
+                            Check Availability &amp; Book
+                        </button>
+<p class="text-center text-[10px] text-slate-400 font-bold uppercase tracking-tight">No payment required upfront</p>
+</form>
+</div>
+</div>
+</section>
+<!-- High Impact Services Grid -->
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">Our Specialist <span class="underline text-primary">Services</span></h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-xl text-lg">Precision engineering meets exceptional customer care. We handle everything from basic checks to complex electrical diagnostics.</p>
+</div>
+<a class="inline-flex items-center gap-2 font-black uppercase tracking-widest text-primary hover:gap-4 transition-all group" href="#">
+                        Explore All Services <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service Card 1 -->
+<div class="group bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all shadow-sm hover:shadow-xl">
+<div class="bg-primary/5 p-4 rounded-xl w-fit mb-6 group-hover:text-white transition-all text-primary group-hover:bg-primary">
+<span class="material-symbols-outlined text-4xl">precision_manufacturing</span>
+</div>
+<h3 class="text-xl font-black uppercase tracking-tight mb-3">Full Service</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6">Comprehensive 50-point inspection including oil and filter changes for all makes.</p>
+<ul class="space-y-2 mb-6 text-sm font-bold text-slate-500">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Engine Tuning</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Fluid Top-ups</li>
+</ul>
+<button class="text-xs font-black uppercase tracking-widest border-b-2 border-primary/20 hover:border-primary transition-all text-primary">Learn More</button>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all shadow-sm hover:shadow-xl">
+<div class="bg-primary/5 p-4 rounded-xl w-fit mb-6 group-hover:text-white transition-all text-primary group-hover:bg-primary">
+<span class="material-symbols-outlined text-4xl">tire_repair</span>
+</div>
+<h3 class="text-xl font-black uppercase tracking-tight mb-3">Tyre Fitting</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6">Premium &amp; budget tyre brands in stock with laser alignment for optimal performance.</p>
+<ul class="space-y-2 mb-6 text-sm font-bold text-slate-500">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Laser Alignment</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Nitrogen Inflation</li>
+</ul>
+<button class="text-xs font-black uppercase tracking-widest border-b-2 border-primary/20 hover:border-primary transition-all text-primary">Learn More</button>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all shadow-sm hover:shadow-xl">
+<div class="bg-primary/5 p-4 rounded-xl w-fit mb-6 group-hover:text-white transition-all text-primary group-hover:bg-primary">
+<span class="material-symbols-outlined text-4xl">settings_input_component</span>
+</div>
+<h3 class="text-xl font-black uppercase tracking-tight mb-3">Diagnostics</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6">Cutting-edge scanning equipment to identify and clear complex electronic faults.</p>
+<ul class="space-y-2 mb-6 text-sm font-bold text-slate-500">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> ECU Remapping</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Fault Clearing</li>
+</ul>
+<button class="text-xs font-black uppercase tracking-widest border-b-2 border-primary/20 hover:border-primary transition-all text-primary">Learn More</button>
+</div>
+<!-- Service Card 4 -->
+<div class="group bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all shadow-sm hover:shadow-xl">
+<div class="bg-primary/5 p-4 rounded-xl w-fit mb-6 group-hover:text-white transition-all text-primary group-hover:bg-primary">
+<span class="material-symbols-outlined text-4xl">minor_crash</span>
+</div>
+<h3 class="text-xl font-black uppercase tracking-tight mb-3">Brake Repair</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6">Expert replacement of pads, discs, and fluid for maximum safety on the road.</p>
+<ul class="space-y-2 mb-6 text-sm font-bold text-slate-500">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> ABS Specialists</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Brake Bleeding</li>
+</ul>
+<button class="text-xs font-black uppercase tracking-widest border-b-2 border-primary/20 hover:border-primary transition-all text-primary">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Carousel Section -->
+<section class="py-24 overflow-hidden relative bg-secondary">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 translate-x-32"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<div class="text-center mb-16">
+<h2 class="text-white text-4xl font-black uppercase tracking-tighter mb-4 italic">Drivers Love Us</h2>
+<div class="flex justify-center gap-1 mb-2">
+<span class="material-symbols-outlined fill-current text-primary">star</span>
+<span class="material-symbols-outlined fill-current text-primary">star</span>
+<span class="material-symbols-outlined fill-current text-primary">star</span>
+<span class="material-symbols-outlined fill-current text-primary">star</span>
+<span class="material-symbols-outlined fill-current text-primary">star</span>
+</div>
+<p class="text-slate-300 font-bold tracking-widest uppercase text-sm">4.9/5 Based on 1,200+ Reviews</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Carousel Items (Fixed for Demo) -->
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+<p class="text-white italic text-lg leading-relaxed mb-6">"Fantastic service! I booked my MOT online and it was sorted in under an hour. The team were incredibly professional and clear about everything."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-blue-300" data-alt="Portrait of a happy customer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFu_axV0W0g0YGoEQJnkvpwhxE-2Jf25tzQvpDxICph6Nbfsf0bBumq7UYBJuD_6tL6paHcsPXRO5cq-zaQ0RjkG4Fotn9jb_Yv3SRI9qm3ij9NWbH4e2BXFGAertQ25C16j8tGyN9OJPCvXmavS-i2qGZBEk7tjJK6rnEWNzfoFtJxJAFUlb9N8LTVW45Gxt7SVnCBfKFf9ixEL-mixT09TmB8okiYvdK5Vwpp33DqaS-mNtcqzzNkeG4uXdl7eyRWHHC8jOJQqjN'); background-size: cover;"></div>
+<div>
+<p class="text-white font-black uppercase text-sm tracking-widest">James Harrison</p>
+<p class="text-slate-400 text-xs font-bold">BMW 3 Series Owner</p>
+</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hidden md:block scale-110 shadow-2xl z-10">
+<p class="text-white italic text-lg leading-relaxed mb-6">"Best garage in the area. Transparent pricing, no hidden extras, and they even washed my car after the service. I won't go anywhere else."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-blue-300" data-alt="Portrait of a female client" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAG_wwztCwiZ4r6Z50w_E-0Yi42ttgTS4sqwVzApO_xgytoA9UmX-XQSCnbsEC3fvoPhk8-1DmBk1eGrogxjlw8IVGqt4GkoxU0QAvGrfAE1XrH7vCU6_gSFmOtZdwEA21uFqLjaeAmiTeHCpnYclNUaWYSiUSnpQO_TwDvXVgaRzJ0WP8AORFOMI2O_RnMtxTrzzsIwjAeLmHkG_ebZxX8GPc1mA6MJinE24kNEwI03AJFwNhf7k4uAsinBmwcb7ok9YbCAY3GXyFc'); background-size: cover;"></div>
+<div>
+<p class="text-white font-black uppercase text-sm tracking-widest">Sarah Jenkins</p>
+<p class="text-slate-400 text-xs font-bold">Ford Fiesta Owner</p>
+</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hidden lg:block">
+<p class="text-white italic text-lg leading-relaxed mb-6">"Honest and reliable. They showed me exactly what needed fixing and gave me a fair quote. Highly recommended for anyone needing repairs."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-blue-300" data-alt="Portrait of a male customer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAD_R0egbaC6n7o9NDSrVeIRUKb_JaoRcFuj9P0cNVty1_sxux1obpUFkFm-gXdPMe4pdMM9d8ucLa-5Pr2Al2iZYMcRrt0hm5R2-0xrkgyfUKhrn3fLUJOgMBPFQr4e2OAg3VkYPBMZByzN6514Jn94uls3atTvZZiaKHpsOJ3ez4pQKTuKKmX9eR_Fo3wKT3YD8JsfNvr94w2G0EmxVzHfkkL7RwkKHH5DUjCKrtBat41ClfLWmQ57QYH8Iut4a3me7l1i4xo3x7z'); background-size: cover;"></div>
+<div>
+<p class="text-white font-black uppercase text-sm tracking-widest">Robert Chen</p>
+<p class="text-slate-400 text-xs font-bold">Audi A4 Owner</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center gap-4 mt-12">
+<button class="size-10 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Full Width Map & Contact Section -->
+<section class="relative h-[500px] w-full bg-slate-200">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 grayscale contrast-125 opacity-70" data-alt="Stylized map of a city area" data-location="London" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGrudLEEOoUG7f0XrkVhSu5YUWdO6cC5sM3cSwdxF2W5PV-VF_vDeUKEowI6FUCiBoWbjnU_gOLD2zr5ItFZSkK2mwnEt5cmc6s6Q5PneV5mZLr42iNBzSFdJAiEVOoSzCkD7K2HZFzk2K9o7zedrGw2byNlW6cEiqJ-Dt93N_nXTq_ZeRNVV6wsHI0T1cgqr6Mq1szcFEMMY3zjIjjd2T8GvFHdIT3OWo3D7uom5R8_ibQiAXc-fNdI0cUJSq3nZCMWGZj88T55xn'); background-size: cover; background-position: center;"></div>
+<div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-start pointer-events-none">
+<div class="bg-white dark:bg-slate-900 p-10 rounded-xl shadow-2xl max-w-md pointer-events-auto border-t-4 border-primary">
+<h3 class="text-3xl font-black uppercase tracking-tighter mb-6">Find <span class="text-primary">Us</span></h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-black uppercase tracking-widest text-xs text-slate-500 mb-1">Our Location</p>
+<p class="font-bold text-slate-800 dark:text-slate-200">123 Auto Drive, Industrial Park, <br/>London, E1 4NS</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p class="font-black uppercase tracking-widest text-xs text-slate-500 mb-1">Working Hours</p>
+<p class="font-bold text-slate-800 dark:text-slate-200">Mon - Fri: 08:30 - 18:00 <br/>Sat: 09:00 - 13:00</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">phone_in_talk</span>
+<div>
+<p class="font-black uppercase tracking-widest text-xs text-slate-500 mb-1">Contact Details</p>
+<p class="font-bold text-slate-800 dark:text-slate-200">01234 567 890 <br/>hello@autoserve.co.uk</p>
+</div>
+</div>
+<button class="w-full text-white py-3 rounded-lg font-black uppercase tracking-widest hover:bg-primary transition-all bg-primary">Get Directions</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-slate-800 pb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-primary p-1 rounded">
+<span class="material-symbols-outlined text-white text-xl">directions_car</span>
+</div>
+<h2 class="text-2xl font-black tracking-tight text-white uppercase">AutoServe</h2>
+</div>
+<p class="text-sm leading-relaxed mb-6">Providing expert automotive maintenance and MOT services for over 25 years. Quality engineering you can depend on.</p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-sm">social_leaderboard</span></a>
+<a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-black uppercase tracking-widest text-xs mb-6">Quick Links</h4>
+<ul class="space-y-4 text-sm font-bold">
+<li><a class="hover:text-white transition-colors" href="#">Book MOT Online</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Service Pricing</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Repair Services</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Classic Car Care</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-black uppercase tracking-widest text-xs mb-6">Company</h4>
+<ul class="space-y-4 text-sm font-bold">
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-black uppercase tracking-widest text-xs mb-6">Newsletter</h4>
+<p class="text-xs font-bold mb-4">Get maintenance tips and special offers.</p>
+<div class="flex">
+<input class="bg-slate-800 border-none rounded-l-lg py-3 px-4 w-full focus:ring-1 focus:ring-primary text-sm" placeholder="Email Address" type="email"/>
+<button class="bg-primary px-4 rounded-r-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-white">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+<p>© 2024 AutoServe Ltd. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Vat Reg: 123 4567 89</a>
+<a class="hover:text-white transition-colors" href="#">Company No: 9876543</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
