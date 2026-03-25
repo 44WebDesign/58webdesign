@@ -160,7 +160,7 @@ export default function Footer({ hideContactSection = false }: FooterProps) {
             <a href="#" className="hover:opacity-100 transition-opacity">
               <Facebook size={18} />
             </a>
-            <a href="#" className="hover:opacity-100 transition-opacity">
+            <a href="https://www.instagram.com/58webdesign/" className="hover:opacity-100 transition-opacity">
               <Instagram size={18} />
             </a>
             <a href="#" className="hover:opacity-100 transition-opacity">
