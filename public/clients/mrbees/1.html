@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffc105",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#181610",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Sticky Navigation -->
+<nav class="sticky top-0 z-50 w-full border-b-4 border-primary bg-background-dark/95 backdrop-blur-md px-4 md:px-10 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">hexagon</span>
+<h1 class="text-2xl font-black tracking-tighter text-white uppercase italic">Mr Bees <span class="text-primary">Brewery</span></h1>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Our Beers</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Taproom</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Events</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Shop</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-yellow-400 text-background-dark px-6 py-2 font-black uppercase text-sm tracking-tighter transform -skew-x-12 transition-all">
+                    Find Us
+                </button>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">shopping_basket</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[870px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center z-0" data-alt="Close up of a cold beer glass with condensation" style="background-image: linear-gradient(to bottom, rgba(24,22,16,0.3), rgba(24,22,16,0.9)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyyh30Y5MEhKFGUJt_JjlU_tXTi8xdIhnGqehivvnim7YBAwNcNJJ3ZPIPrmZXsyGV77JrL5D-f3purSyiPoDAy18wWBOy2iJT4TjzQJczg_eBpFZG0iZ855ReAFPJ4gA6auQ3cazdr57uBznQng6wYmhEmwTagYjMf2FNs2EWRstlStCN2JV3MS897uoXCoyLkyFhupmJWVUipveMmvNBi4jtwNX-SQ0GPD5dJwndieAfMvIkydZdLSYUB8_zKBAsi-VLM--dnWRp');"></div>
+<div class="relative z-10 text-center px-4 max-w-5xl">
+<span class="inline-block bg-primary text-background-dark font-black px-4 py-1 mb-6 text-sm uppercase tracking-[0.3em] transform -rotate-1">Felixstowe's Finest</span>
+<h1 class="text-6xl md:text-9xl font-black leading-none tracking-tighter text-white uppercase mb-8">
+                LOCAL BEER.<br/>
+<span class="text-primary underline decoration-8 underline-offset-8">BOLD SPIRIT.</span>
+</h1>
+<p class="text-xl md:text-2xl font-medium text-slate-300 mb-10 max-w-2xl mx-auto">
+                Crafting the finest ales in Felixstowe with an edgy soul and a honey-hued heart. No fluff, just flavor.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-background-dark font-black px-10 py-5 text-xl uppercase tracking-tighter transform -skew-x-12 hover:scale-105 transition-transform">
+                    View Our Beers
+                </button>
+<button class="border-4 border-white text-white font-black px-10 py-5 text-xl uppercase tracking-tighter transform -skew-x-12 hover:bg-white hover:text-background-dark transition-all">
+                    Book a Table
+                </button>
+</div>
+</div>
+</header>
+<!-- Our Beers Section -->
+<section class="py-24 px-4 bg-background-dark">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-end justify-between mb-16 border-l-8 border-primary pl-6">
+<div>
+<h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">The Lineup</h2>
+<p class="text-primary font-bold text-lg uppercase tracking-widest mt-2">Born in the Hive, Brewed for the Bold</p>
+</div>
+<a class="hidden md:block text-white font-bold underline hover:text-primary" href="#">View All 12 Brews</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Beer Card 1 -->
+<div class="group relative bg-slate-900 border-2 border-slate-800 p-6 flex flex-col items-center text-center hover:border-primary transition-colors cursor-pointer">
+<div class="w-full aspect-[3/4] mb-6 overflow-hidden bg-slate-800 flex items-center justify-center">
+<img alt="Beer can" class="h-[80%] object-contain group-hover:scale-110 transition-transform" data-alt="Modern edgy craft beer can design Honey Stinger IPA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ8ivqb5RgF3hrFEhGMIJ6IYiOycr1OkBuO-UTtIijuJKHe-zzGueJLsdbhHsH2ZFneUyVUYIlBleoRcl76vINw6OfZqm2yarnjuZwZt_7NrSFDqgL4mo1JbfsiXoJQa6YgdouJi9boO2alsJcJlp_ikRi9xOOx8JnURHjyQHsihoekyCGtkRP-44Oyu0U3q7ch2IcTqmOUEs_z4f0ceJ53-DCb5kBeYS3mLSPrXCSJl2dQdMk2CCsufmkbidX2B0C6GF6pWF5FVm2"/>
+</div>
+<h3 class="text-2xl font-black uppercase tracking-tighter text-white mb-2">Honey Stinger IPA</h3>
+<p class="text-slate-400 font-bold mb-4">6.5% ABV • BOLD &amp; HOPPY</p>
+<button class="w-full bg-slate-800 group-hover:bg-primary group-hover:text-background-dark py-3 font-black uppercase transition-colors">Add to Cart</button>
+</div>
+<!-- Beer Card 2 -->
+<div class="group relative bg-slate-900 border-2 border-slate-800 p-6 flex flex-col items-center text-center hover:border-primary transition-colors cursor-pointer">
+<div class="w-full aspect-[3/4] mb-6 overflow-hidden bg-slate-800 flex items-center justify-center">
+<img alt="Beer can" class="h-[80%] object-contain group-hover:scale-110 transition-transform" data-alt="Craft beer can design Felixstowe Fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5EA92b8-0BWhq_v_nEowG__xRKRf84HYqzt9TF8yotjQf4YJlnyTIgffMyu7oS2EeGTuocSo9KaxM4YHAQ8oLPSud8rlzwp4Az7TXvE9BWGTdxguq0x9w3Mv-eeJA6ZqtV3EZQIdR2V7KKwAnjPhvuem3lT-7V03MdemnEikvh92XkHf07dqPEBew7Ci8bsk45uxhn3GIRg1FXy1uOOO-rDFChktiydYzSYZYzppfCSC2fRQDqR5YN52p-knuGjly_p3f2avmlPAB"/>
+</div>
+<h3 class="text-2xl font-black uppercase tracking-tighter text-white mb-2">Felixstowe Fog</h3>
+<p class="text-slate-400 font-bold mb-4">5.2% ABV • HAZY &amp; SMOOTH</p>
+<button class="w-full bg-slate-800 group-hover:bg-primary group-hover:text-background-dark py-3 font-black uppercase transition-colors">Add to Cart</button>
+</div>
+<!-- Beer Card 3 -->
+<div class="group relative bg-slate-900 border-2 border-slate-800 p-6 flex flex-col items-center text-center hover:border-primary transition-colors cursor-pointer">
+<div class="w-full aspect-[3/4] mb-6 overflow-hidden bg-slate-800 flex items-center justify-center">
+<img alt="Beer can" class="h-[80%] object-contain group-hover:scale-110 transition-transform" data-alt="Dark stout beer can design Queen Bee Stout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo5QhT2sh5kjr2sZLHE55yuOHEjxhQscR3IFM9jQg4P9OPZWYuRcJgB8SrrTsxq0JVCt3uzJatBRUBNLsYB11AmpbbKJfwHpNIB5lGa5o-jbzIQ2VYvG_RIec-UC5GEYqoj3DeaUrcffBBzklRoMQ3rdpjRswFeH3t4UkBq1Izjwcbhix58TMY48NPBVR6V7ZFoIChsWO5z-8UteO_cw2Sgo14jSR0npj5EWulHTEv2UueNizDP8daLRVaG37j0HfxWgKImnco9Uj6"/>
+</div>
+<h3 class="text-2xl font-black uppercase tracking-tighter text-white mb-2">Queen Bee Stout</h3>
+<p class="text-slate-400 font-bold mb-4">7.0% ABV • RICH &amp; DARK</p>
+<button class="w-full bg-slate-800 group-hover:bg-primary group-hover:text-background-dark py-3 font-black uppercase transition-colors">Add to Cart</button>
+</div>
+<!-- Beer Card 4 -->
+<div class="group relative bg-slate-900 border-2 border-slate-800 p-6 flex flex-col items-center text-center hover:border-primary transition-colors cursor-pointer">
+<div class="w-full aspect-[3/4] mb-6 overflow-hidden bg-slate-800 flex items-center justify-center">
+<img alt="Beer can" class="h-[80%] object-contain group-hover:scale-110 transition-transform" data-alt="Pale ale beer can design Worker Pale Ale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCymBn74WgX2rBXB6oNKhchr9syx3DA3JvpcS6RfTNDKJRcoXlvlHzLSiy6kFwFBKz9yP1ZCsxBFOSSw2bOmHYGxF48ayHt62kSmifI7LmFDVePa9KF2U_bCVOiHJU31ye4o5ZtEVq8yP-9K5Ff10Mu0wUf-d28n7BKpjVwZGGL5rHosxK2N3lg3jQmF4gd0oh2pxmA-XG5Txz00WzgXpXM1iX3-YjyO-TK7ad13I3N-GhjlP9WMU5DuTrAZQCIgT4_BQZ-7xl9z2eb"/>
+</div>
+<h3 class="text-2xl font-black uppercase tracking-tighter text-white mb-2">Worker Pale Ale</h3>
+<p class="text-slate-400 font-bold mb-4">4.5% ABV • CRISP &amp; CLEAN</p>
+<button class="w-full bg-slate-800 group-hover:bg-primary group-hover:text-background-dark py-3 font-black uppercase transition-colors">Add to Cart</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Taproom & Visit Us -->
+<section class="relative bg-background-light dark:bg-slate-900 overflow-hidden">
+<div class="flex flex-col lg:flex-row min-h-[600px]">
+<div class="w-full lg:w-1/2 p-10 md:p-20 flex flex-col justify-center">
+<h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">Drink at<br/><span class="text-primary">The Hive</span></h2>
+<div class="space-y-6 text-slate-300">
+<p class="text-xl">Our taproom in the heart of Felixstowe is where the magic happens. 20 taps of fresh, unfiltered energy.</p>
+<div class="grid grid-cols-2 gap-8 py-8 border-y-2 border-slate-800">
+<div>
+<h4 class="text-primary font-black uppercase mb-2">Opening Hours</h4>
+<p class="text-sm">Wed-Fri: 4pm - 11pm</p>
+<p class="text-sm">Sat: 12pm - 12am</p>
+<p class="text-sm">Sun: 12pm - 8pm</p>
+</div>
+<div>
+<h4 class="text-primary font-black uppercase mb-2">Location</h4>
+<p class="text-sm">12 Pier Side Rd,</p>
+<p class="text-sm">Felixstowe, UK</p>
+</div>
+</div>
+<button class="bg-primary text-background-dark font-black px-10 py-5 text-lg uppercase tracking-tighter transform -skew-x-12 hover:scale-105 transition-transform">
+                        Get Directions
+                    </button>
+</div>
+</div>
+<div class="w-full lg:w-1/2 min-h-[400px] bg-slate-800 relative grayscale hover:grayscale-0 transition-all duration-700">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Gritty street map aesthetic of Felixstowe coastline" data-location="Felixstowe" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrdEkwlrRK-zyEkIZQy1DWOXTYyZv2rpfQz9M_LAzv_xlpYaEmyW11FTu2ak_vAtwAJK9HVAmSMLovyW_vzSMvmerG4HzLFqDKzX5bnkse8eD9s_snFGhjZ5CJ726MoRC2X6xBb-pKCbenawlUHiR81d-R2MczCzQNMqgOrLqOq4eC9L0nPieRmbhlc9ZaxZECljU_nzhvl2SpYcnBomJ4vaYlvnV6lSnN4Uudk8qrN_gFUZXzvT-7b8eAQMOIc-_lOqWzIXxAj93P');"></div>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="bg-primary text-background-dark p-4 rounded-full shadow-2xl animate-pulse">
+<span class="material-symbols-outlined text-4xl">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community & Events -->
+<section class="py-24 px-4 bg-background-dark overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white text-center mb-16 leading-none">JOIN THE <span class="text-primary italic">SWARM</span></h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="space-y-4">
+<div class="h-64 bg-slate-800 rounded-lg overflow-hidden border-2 border-transparent hover:border-primary transition-all">
+<img class="w-full h-full object-cover" data-alt="High energy crowd at a craft brewery event" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0AaIRa4t6OLkg726Jj5VHNzkkXCsrLMmIZy8jHrqJiPk2HJzy3VpXfbBnuF0WX5nfwL7KiXTE0232oD5G1nVoyr1rg9x7tfZgd3ueqiC2OJUzQqtivGy67tWU4xvLb5ZwEO_frZSyoQ96sN-49rUBKNXJgJM0arEhLbkEhidV9bYbELestca_avzPDaP6CUZc5PAZMu8wkWOB_pRqHcA5rAQF8P6UhDmxoL0ZALKcaCpk7hpuL4sPM8HqocfASoyiLrU0giVsBsK_"/>
+</div>
+<div class="h-40 bg-slate-800 rounded-lg overflow-hidden border-2 border-transparent hover:border-primary transition-all">
+<img class="w-full h-full object-cover" data-alt="Close up of cheersing beer glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsd8EUPq_tDKUIHq0dBDl3i1AEMimzVb4FROYT7iMiAXvyL4UqGRO15CKS_HnJqf7s2LG7EVNbq5x6ifXAvMIeiFkEVfe9HXdQyvs30bzGWIQqwJBpuIXB9ZC4z18B7Mj5eFooYkQVfSMdlr5pV1T4BdeugdR-q1d9xgtgtWpacR55iwdqr7W7M6kTFjT0NArXdq8PuiiAFT9WeMV4nTUlZPml3kgsYxSbWKKtViWoIOvG64gZgt6ffTcZ_R396lyYE6NcYBcKAbvB"/>
+</div>
+</div>
+<div class="space-y-4 pt-8">
+<div class="h-40 bg-slate-800 rounded-lg overflow-hidden border-2 border-transparent hover:border-primary transition-all">
+<img class="w-full h-full object-cover" data-alt="Bartender pouring a fresh pint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFSJsc1eviRAAmXapDVeD0tQSTuN2q5JfMXY3ZwokWqlJd7u4KAMDL-Dgs0y2UNCh_kksGBCnsF-XqGWU8SHPUA6E3X18aighABmUcXWRCq8qtLIPeBuJBtcEna9-pBjRpkzLe7KerDgJ1yz5XUFUwmmG2_Gx4UGh0yjdeHUcsZfw8Z1CYjBtjmO8wZYiyaWJ4fA-eA9nrX42wmcnpEX-fF3KXQHhxpTlBuDp6R2sf1Io_GLgQ_drdxgyUwGSDjjYBEH9N9aaXoCbU"/>
+</div>
+<div class="h-64 bg-slate-800 rounded-lg overflow-hidden border-2 border-transparent hover:border-primary transition-all">
+<img class="w-full h-full object-cover" data-alt="People enjoying drinks at a long table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaH0Md3Y2EO6kC6lHfvfdMPmOs0r4PCkmpCAL2Eu9nn7R5zZeJ9ee0Nk90zO_JerA0cKwRJ-fd9zrq-1zzt-jSNqOI5kw4bxqrtPLPZHGHQ_K9NxamcmMZaIt8AtMMVbm4TTzqNtOSRk6Da9a9YSoyFM7qAmky0V6rfRts11xySgMzdufgEOzFGRKBpL4NOLQvYiTsOEnCgPAvIgRX-lsZquMbeCLmZxZU4TIFE5-nq-vZQXhPmyAEEoQ9fr3xrsX3YHfRfWCwgoKF"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="h-80 bg-slate-800 rounded-lg overflow-hidden border-2 border-transparent hover:border-primary transition-all">
+<img class="w-full h-full object-cover" data-alt="Brewery equipment with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBxB9wyJqyEOFNLydGgT00epMCK0UdQzgmvcHzrRVq_4GYiRUSfvIgnIvZFCaqCQBqjWhxMxGO6rBMf9eHZvvLfel4GmQvXcXnw7pFSr9mmeVoSn7rJ6nUHbFBeTgqFReQeR4PAcXPz48d5MR8xv1baK-bpgGQBjYUrGMOx0sATjgQWrYqHqfxxPh9C-ALb-QfSPkteHTev5dc5Hh0IvuIGoc2Bc15CNYVaHYyl2WRll_yt5cveMhVHrjWBUfcVGL3_cJZrW917fT6"/>
+</div>
+<div class="h-48 bg-slate-800 rounded-lg overflow-hidden border-2 border-transparent hover:border-primary transition-all">
+<img class="w-full h-full object-cover" data-alt="Outdoor festival atmosphere with beer taps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY-Swm_ASwKpArQEHIpB-s9kt5xV_-N2zU5U8fL2wIq6iHN8Vfyz5ScPMbrxCh2XiQDBzOZoSiahP2lk3dIh_j49-uhankL6s9eHBoYrm1_OJReoSDtJIvQs7jH0iga-FsaqDCCeJaQMHBb-YFj5GVSgKPrAWE058z1WiPIz1Y3yrRekTx_hrGqLdK5oCBFK4dbUmsQseQMvPxfTqz3j2hVOu_s-G_-oUjY5T9i83YCVdDgCCLNnLH8uSku0ccXCGDpJNWvDq8R0oS"/>
+</div>
+</div>
+<div class="space-y-4 pt-12">
+<div class="h-52 bg-slate-800 rounded-lg overflow-hidden border-2 border-transparent hover:border-primary transition-all">
+<img class="w-full h-full object-cover" data-alt="Live music band performing in a brewery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7nOtHy511PvL__8UG5O1I8NIl4WwWJN1REuUikbFk4n_qMgwK_DjbQLoOvOPQ9-AyEjb_p7hWAIXhiOpjLaBTZRGvx5zN3NPxGflG7FOZkp61OLq8oIWqZfgC4KZwrhyAr7Z5fpiBtHDP-yGkYWXN-UjYHH7FqFj56IqnYU6uEw4daKhbb6NoEbjV5ebvtPIOxJL5LUEbEHAN22hXpk23xsThxOJb9tIpS8IdChAEUXv42k42nvycUhiUij3w3TsZahOUIVGk8sip"/>
+</div>
+<div class="h-52 bg-primary flex flex-col items-center justify-center p-6 text-center rounded-lg">
+<h4 class="text-background-dark font-black text-2xl uppercase italic">Tag Us</h4>
+<p class="text-background-dark font-bold">@MRBEESBREWERY</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark border-t-8 border-primary py-20 px-4">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-5xl">hexagon</span>
+<h2 class="text-4xl font-black tracking-tighter text-white uppercase italic">Mr Bees <span class="text-primary">Brewery</span></h2>
+</div>
+<p class="text-xl text-slate-400 max-w-md font-medium mb-8">
+                        Independent. Bold. Unfiltered. We're on a mission to bring craft beer back to its roots in Felixstowe. No additives, no nonsense, just great beer.
+                    </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 flex items-center justify-center bg-slate-800 hover:bg-primary hover:text-background-dark transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="w-12 h-12 flex items-center justify-center bg-slate-800 hover:bg-primary hover:text-background-dark transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="w-12 h-12 flex items-center justify-center bg-slate-800 hover:bg-primary hover:text-background-dark transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-black uppercase text-xl mb-6 tracking-tighter underline decoration-primary decoration-4 underline-offset-4">Explore</h4>
+<ul class="space-y-4 text-slate-400 font-bold uppercase tracking-widest text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">The Brewery</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Wholesale</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Store Locator</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-black uppercase text-xl mb-6 tracking-tighter underline decoration-primary decoration-4 underline-offset-4">Newsletter</h4>
+<p class="text-slate-400 text-sm mb-4">Get first dibs on limited drops and events.</p>
+<div class="flex flex-col gap-3">
+<input class="bg-slate-800 border-2 border-slate-700 text-white p-3 font-black focus:border-primary outline-none uppercase placeholder:text-slate-600" placeholder="YOUR EMAIL" type="email"/>
+<button class="bg-primary text-background-dark font-black py-3 uppercase tracking-tighter hover:bg-yellow-400 transition-colors">Join Swarm</button>
+</div>
+</div>
+</div>
+<div class="border-t-2 border-slate-800 pt-8 flex flex-col md:row justify-between items-center gap-4 text-slate-500 font-bold text-xs uppercase tracking-widest">
+<p>© 2024 Mr Bees Brewery. Drink Responsibly.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
