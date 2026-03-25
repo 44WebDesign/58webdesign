@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffc105",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#1a1608",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">hexagon</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight uppercase">Mr Bees Brewery</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Our Process</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Small Batch</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Product Lineup</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="md:hidden p-2 text-slate-100">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-end px-6 lg:px-20 pb-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent"></div>
+<img alt="Craft brewing process macro shot" class="w-full h-full object-cover" data-alt="Macro shot of golden beer bubbles in a glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvr5459rFMm83ERCpwqAnpwhL_xZEY_4dAmhHgxlVjYdL0rg7FeWh6zyy4LT16ovZ-314AQqVQiGvLui8CVhGCBINhhCOWzr2lu4q2tybp9NTwz5VHClA4wFGgCs2-Pru-Lf0D_41cwhVMuGnzIwBgNdns2EK1De-1ykmyWBGSdMd40q0L3LG68DKdsPsvv9MWOMsTofCnp_k0mav4XxlVYFPeDh8E-s2YVDwra0ebv7tMtObXDAztJCmisDljdrtv3oFa3L8RrVHP"/>
+</div>
+<div class="relative z-10 max-w-4xl">
+<span class="inline-block px-4 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6">Established 2012</span>
+<h2 class="font-serif italic text-5xl md:text-7xl lg:text-8xl leading-none mb-6">The Art of <br/><span class="not-italic font-display font-black text-primary">Craft &amp; Process</span></h2>
+<p class="text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed">
+                    Elevating the traditional brewing ritual through scientific precision and the pure essence of local honey. Every bottle tells a story of patience.
+                </p>
+</div>
+</section>
+<!-- Process Timeline: From Hive to Glass -->
+<section class="py-24 px-6 lg:px-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h3 class="text-primary font-bold uppercase tracking-widest text-sm mb-2">Our Methodology</h3>
+<h2 class="text-4xl md:text-5xl font-serif">From Hive to Glass</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Step 1 -->
+<div class="group">
+<div class="mb-6 relative">
+<div class="text-6xl font-black text-primary/10 absolute -top-8 -left-4">01</div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">nest_eco_leaf</span>
+<h4 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Sourcing Nectar</h4>
+<p class="text-slate-400 leading-relaxed">We partner with local apiaries to select the finest seasonal wildflower honey, ensuring a complex floral profile in every batch.</p>
+</div>
+<div class="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/4"></div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="group">
+<div class="mb-6 relative">
+<div class="text-6xl font-black text-primary/10 absolute -top-8 -left-4">02</div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">grain</span>
+<h4 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Precision Malting</h4>
+<p class="text-slate-400 leading-relaxed">Our grains are slow-roasted to specific temperatures to develop deep, caramel undertones that complement our honey's sweetness.</p>
+</div>
+<div class="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2"></div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="group">
+<div class="mb-6 relative">
+<div class="text-6xl font-black text-primary/10 absolute -top-8 -left-4">03</div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">skillet</span>
+<h4 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Artisanal Brewing</h4>
+<p class="text-slate-400 leading-relaxed">Copper kettles and small-batch techniques allow us to monitor the delicate chemical balance required for our signature finish.</p>
+</div>
+<div class="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4"></div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="group">
+<div class="mb-6 relative">
+<div class="text-6xl font-black text-primary/10 absolute -top-8 -left-4">04</div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">ac_unit</span>
+<h4 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Cold Conditioning</h4>
+<p class="text-slate-400 leading-relaxed">Weeks of low-temperature maturation clarify the brew and refine the carbonation for a velvety, sophisticated mouthfeel.</p>
+</div>
+<div class="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Small Batch Excellence Feature -->
+<section class="py-24 px-6 lg:px-20 bg-slate-900/30">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Brewer inspecting quality" class="w-full h-full object-cover" data-alt="Close up of amber liquid in a copper kettle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHTQgptHs3m6vUBXIVosoch4skAaD-fQ6EM4rv9M4EQFSbnAK5no8uu8l3EbmJFG6P1lafgIaHvg7g6Mx9yE058x0cTd6mP70KtkpLtPD1VWOvdEkUOK0-QVLmGifNjp5BIxNOwvF75qJpET0aUoTNP0PH5LTny_Qa6VVZ4Y8EGZvCbujTaQSppax-OO9Dxap1RLouh1GEZc-tbb9jC4batTCDGyCykIq8J7qAa9oE4Pln72gmeSpbd6EMJ2UKMzt_RRbNGDebLOjP"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 p-6 bg-primary rounded-xl text-background-dark shadow-xl hidden md:block">
+<p class="font-bold text-2xl mb-1">Batch #402</p>
+<p class="text-sm opacity-80 mb-4">Limited Edition Release</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">verified</span>
+<span class="text-xs font-bold uppercase">Certified Master Brewer</span>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h3 class="text-primary font-bold uppercase tracking-widest text-sm mb-4">The Pursuit of Perfection</h3>
+<h2 class="text-4xl md:text-5xl font-serif mb-8 leading-tight">Small Batch <br/><span class="italic">Excellence</span></h2>
+<div class="space-y-6">
+<div class="flex gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">temp_preferences_custom</span>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Strict Temperature Control</h4>
+<p class="text-slate-400">Fluctuations of even one degree are rejected. We maintain absolute thermal stability throughout the 21-day fermentation cycle.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">filter_vintage</span>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Single-Origin Ingredients</h4>
+<p class="text-slate-400">We never blend harvests. Each batch reflects the unique environmental conditions of the season it was conceived.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">ink_pen</span>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Hand-Signed Quality</h4>
+<p class="text-slate-400">Every bottle is inspected by our head brewer and hand-labeled with its unique batch and bottle number.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Lineup -->
+<section class="py-24 px-6 lg:px-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h3 class="text-primary font-bold uppercase tracking-widest text-sm mb-2">Current Selection</h3>
+<h2 class="text-4xl md:text-5xl font-serif">The Seasonal Lineup</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Product 1 -->
+<div class="flex flex-col items-center">
+<div class="w-full aspect-[3/4] rounded-xl bg-slate-900/50 mb-6 flex items-center justify-center relative overflow-hidden group">
+<img alt="Golden Nectar Ale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cold bottle of amber beer with condensation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzRC6JDuBimDNf2NnLqPKmGRFI-GGeAF5GE2qvMR5Biqw0DvVLU8p_hFaj-HIKnCbdD_4DYveYY6zRAAkDhaqPiqgIWYFLkdCvVCdRYzqR0m3xCEhtAPXkno-G_bN7CTV76kaR4O4Tr_RHXgS1c88QeQ2yZmUzZsTFVpbCHZP0MUz-kRF3mlUwXBb-3HW7vmn359C5694E4ub8jwSNHC2bL-UlCUiKHE3l-NvKF88o0Ms3U489RIE6XFs8WZoZWgYne86vLpIFac0s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-60"></div>
+<button class="absolute bottom-6 bg-primary text-background-dark px-6 py-2 rounded-full font-bold text-sm uppercase opacity-0 group-hover:opacity-100 transition-opacity">Add to Cart</button>
+</div>
+<div class="text-center">
+<p class="text-primary text-xs font-bold uppercase tracking-tighter mb-1">6.5% ABV • Honey Ale</p>
+<h4 class="text-2xl font-serif mb-2">Golden Nectar</h4>
+<p class="text-slate-400 text-sm max-w-[250px]">Notes of wildflower, sun-drenched hay, and light citrus zest.</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="flex flex-col items-center">
+<div class="w-full aspect-[3/4] rounded-xl bg-slate-900/50 mb-6 flex items-center justify-center relative overflow-hidden group">
+<img alt="Smoked Malt Porter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Glass of dark stout beer with thick head" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4vqvdf3wplfyrQelzeAa8s18l9Izk9ERdi_3apjSXP2KRWkt6ND6o68jCDvLYCGZMmVlCWdi-kDtKgXoMtfYlna4elRA81Hz8FR75LKTYPuA2TqB5HqQOuLXj2_RJOpHpRfUJInHUYpFrN7xjqMlzRrbQJXv1kIeplIkZ4LHixzSjQscaUdPzGCfOPwMA0iBL5t7dhQBpi0Cz_vZ0R2ICb--0wt0anVFr9OtpljJmChnMDnv3kf5PUVG6EpRiGRAWeuQH3oGLm5Py"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-60"></div>
+<button class="absolute bottom-6 bg-primary text-background-dark px-6 py-2 rounded-full font-bold text-sm uppercase opacity-0 group-hover:opacity-100 transition-opacity">Add to Cart</button>
+</div>
+<div class="text-center">
+<p class="text-primary text-xs font-bold uppercase tracking-tighter mb-1">8.2% ABV • Imperial Stout</p>
+<h4 class="text-2xl font-serif mb-2">Midnight Hive</h4>
+<p class="text-slate-400 text-sm max-w-[250px]">Deep roasted cocoa, burnt honey, and velvet smooth finish.</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="flex flex-col items-center">
+<div class="w-full aspect-[3/4] rounded-xl bg-slate-900/50 mb-6 flex items-center justify-center relative overflow-hidden group">
+<img alt="Dry Hopped Mead" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Light colored beer in a tall elegant glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9zlIRLaRag96C0_vxbn-w2gXV6gQqkk5S0nB290MIqQK1KNCAJYxN1WEVg11nfqtxufRghjOlLNPf1FHFma8Q1gvs9cWOAQDwUMGTxetKhPs9IzX47TXUfMvdfv10pAYVoJOoK1QufFFWgGZErN9tHQtABVUXLmjByvocaV0xRC9AzzEkLDMFePkkvhHUOU_Ap6QE-ZvMXyqpswrZcEE8YBoPFLNsQgX5BdB0CQcAD77teo07QcFfr85W6T2OOdH9oLHfK5ipegxZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-60"></div>
+<button class="absolute bottom-6 bg-primary text-background-dark px-6 py-2 rounded-full font-bold text-sm uppercase opacity-0 group-hover:opacity-100 transition-opacity">Add to Cart</button>
+</div>
+<div class="text-center">
+<p class="text-primary text-xs font-bold uppercase tracking-tighter mb-1">5.4% ABV • Session IPA</p>
+<h4 class="text-2xl font-serif mb-2">Hopped Pollen</h4>
+<p class="text-slate-400 text-sm max-w-[250px]">Crisp resinous pine balanced by a delicate sweetness of young clover.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="py-20 px-6 lg:px-20 border-t border-primary/10">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">mark_as_unread</span>
+<h2 class="text-3xl md:text-4xl font-serif mb-4">Join the Inner Circle</h2>
+<p class="text-slate-400 mb-8 max-w-xl mx-auto">Receive early access to limited release batches, brewing workshops, and our annual hive harvesting festival.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-grow bg-slate-900 border border-slate-700 rounded-lg px-6 py-3 focus:outline-none focus:border-primary transition-colors text-slate-100" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-background-dark font-bold px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors uppercase text-sm tracking-widest" type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<footer class="bg-slate-950 text-slate-400 py-16 px-6 lg:px-20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 text-slate-100 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">hexagon</span>
+<h1 class="text-lg font-bold tracking-tight uppercase">Mr Bees</h1>
+</div>
+<p class="text-sm leading-relaxed mb-6">Crafting liquid gold through the fusion of nature's purity and human ingenuity since 2012.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">location_on</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-slate-100 font-bold mb-6 uppercase text-xs tracking-widest">Explore</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Brewing Process</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Apiary Partners</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-100 font-bold mb-6 uppercase text-xs tracking-widest">Shop</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Year-Round</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Limited Releases</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Merchandise</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-100 font-bold mb-6 uppercase text-xs tracking-widest">Contact</h4>
+<ul class="space-y-3 text-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-lg">location_on</span>
+<span>123 Pollen Way, Honey District<br/>Beetown, BT 45210</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span>hello@mrbees.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-12 mt-12 border-t border-slate-900 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
+<p>© 2024 Mr Bees Brewery. Please drink responsibly. 21+ only.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>
