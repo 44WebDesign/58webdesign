@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en-GB"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent-red": "#D92D20",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .grid-border { border: 1px solid #003366; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary rounded text-white">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<h2 class="text-primary dark:text-slate-100 text-xl font-black leading-tight tracking-tight uppercase">Felixstowe Workshop</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="hover:text-primary font-semibold transition-colors uppercase text-xs tracking-widest" href="#mots">MOTs</a>
+<a class="hover:text-primary font-semibold transition-colors uppercase text-xs tracking-widest" href="#diagnostics">Diagnostics</a>
+<a class="hover:text-primary font-semibold transition-colors uppercase text-xs tracking-widest" href="#sales">Car Sales</a>
+<a class="hover:text-primary font-semibold transition-colors uppercase text-xs tracking-widest" href="#contact">Contact</a>
+</nav>
+<div class="flex gap-3">
+<button class="hidden sm:flex items-center justify-center rounded-lg h-11 px-6 bg-accent-red text-white text-sm font-bold uppercase tracking-wider transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-accent-red/20">
+                    Book an MOT
+                </button>
+<button class="flex items-center justify-center rounded-lg h-11 px-6 border-2 border-primary text-primary dark:text-white text-sm font-bold uppercase tracking-wider hover:bg-primary hover:text-white transition-all">
+                    Call Us
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section with Integrated Booking -->
+<section class="relative bg-white dark:bg-slate-900 py-16 lg:py-24 border-b border-primary/20">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="flex-1 flex flex-col gap-8">
+<div class="space-y-4">
+<span class="text-accent-red font-bold uppercase tracking-[0.2em] text-sm">Professional Excellence</span>
+<h1 class="text-slate-900 dark:text-white text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight">
+                                Premier MOT &amp; <br/><span class="text-primary">Servicing</span> Centre.
+                            </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-xl leading-relaxed">
+                                Experience a highly organised, clean, and minimalist approach to vehicle care in the heart of Felixstowe.
+                            </p>
+</div>
+<!-- Integrated Booking Bar -->
+<div class="bg-white dark:bg-slate-800 p-2 rounded-xl shadow-2xl border border-primary/10 flex flex-col md:flex-row gap-2 max-w-2xl">
+<div class="flex-1 flex items-center px-4 bg-slate-50 dark:bg-slate-700 rounded-lg group">
+<span class="material-symbols-outlined text-slate-400 group-focus-within:text-primary">directions_car</span>
+<input class="w-full border-none bg-transparent focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 font-bold uppercase tracking-widest py-4" placeholder="Enter Registration Number" type="text"/>
+</div>
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors whitespace-nowrap">
+                                Find My Vehicle
+                            </button>
+</div>
+</div>
+<div class="flex-1 w-full aspect-[4/3] relative rounded-2xl overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-primary/10"></div>
+<img alt="Felixstowe Workshop interior" class="w-full h-full object-cover" data-alt="Modern clean car workshop with tools and lifts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoylkKdE3A61sgWM6xu9HLYQAsB_C2jxnqeMQ5laS5JQFpdjEHmxiGMNx7hlgGxsEkMZ49IIKFp_2nrokc5tTBOyPb1DJUkfUsmYUI4IziUIBGtn8FE35V34KmykOiwz8hflo12uz7Jlo7RvQN6aDS3ijLHKjQs0GVxFufBQSncp1H5BEA7N2-4zJenTFjr7LaLJOpB4Z7OaVHhwO39Syo6Bq26ZXxFMW9EV_3xXO4ZclTIgzqQqbhVIoiXtkM4wWIM3KPWUKeygwO"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-20 bg-white dark:bg-background-dark" id="services">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="space-y-2">
+<h2 class="text-primary dark:text-white text-4xl font-black tracking-tight uppercase">Our Expertise</h2>
+<div class="h-1.5 w-24 bg-accent-red rounded-full"></div>
+</div>
+<p class="text-slate-500 max-w-sm">Specialised automotive services delivered with precision and transparency for all makes and models.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-primary/10 border border-primary/10 rounded-2xl overflow-hidden shadow-sm">
+<!-- MOT -->
+<div class="bg-white dark:bg-slate-800 p-8 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group">
+<div class="size-14 bg-primary/5 rounded-full flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<h3 class="text-xl font-bold mb-3 dark:text-white uppercase tracking-tight">MOT Testing</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">DVSA approved testing centre with same-day appointments and free retests.</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary dark:text-white hover:text-accent-red" href="#">
+                            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Diagnostics -->
+<div class="bg-white dark:bg-slate-800 p-8 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group">
+<div class="size-14 bg-primary/5 rounded-full flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<h3 class="text-xl font-bold mb-3 dark:text-white uppercase tracking-tight">Diagnostics</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Advanced fault finding technology for complex electrical and mechanical issues.</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary dark:text-white hover:text-accent-red" href="#">
+                            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Car Sales -->
+<div class="bg-white dark:bg-slate-800 p-8 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group">
+<div class="size-14 bg-primary/5 rounded-full flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">car_rental</span>
+</div>
+<h3 class="text-xl font-bold mb-3 dark:text-white uppercase tracking-tight">Car Sales</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Quality hand-picked used vehicles thoroughly inspected for peace of mind.</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary dark:text-white hover:text-accent-red" href="#">
+                            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 bg-slate-50 dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="text-4xl font-black text-primary dark:text-white uppercase tracking-tight leading-tight">Trusted by the <br/>Felixstowe Community</h2>
+<div class="flex gap-4 items-center">
+<div class="flex text-accent-red">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<span class="font-bold text-slate-900 dark:text-white">4.9/5 Average Rating</span>
+</div>
+</div>
+<div class="grid gap-6">
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl border border-primary/5 shadow-sm relative">
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-primary text-4xl opacity-10">format_quote</span>
+<p class="text-slate-600 dark:text-slate-300 italic mb-6">"Fantastic service. Cleanest workshop I've ever seen. They kept me informed throughout the MOT and the pricing was very fair."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-slate-200" data-alt="Customer avatar profile photo"></div>
+<div>
+<p class="font-bold dark:text-white">James Harrison</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">Felixstowe Local</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-20" id="contact">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="rounded-3xl overflow-hidden bg-white dark:bg-slate-800 border border-primary/10 shadow-2xl flex flex-col lg:flex-row">
+<div class="p-12 lg:w-1/2 flex flex-col justify-center gap-8">
+<div>
+<h2 class="text-3xl font-black text-primary dark:text-white uppercase mb-4 tracking-tight">Visit Our Workshop</h2>
+<p class="text-slate-600 dark:text-slate-400">Conveniently located in Felixstowe, providing expert care for your vehicle.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<p class="font-bold dark:text-white">Workshop Address</p>
+<p class="text-slate-600 dark:text-slate-400">12 Dock Road, Felixstowe, IP11 3QY</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">schedule</span>
+<div>
+<p class="font-bold dark:text-white">Opening Hours</p>
+<p class="text-slate-600 dark:text-slate-400">Mon - Fri: 08:30 - 17:30<br/>Sat: 09:00 - 13:00</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-8 py-3 rounded-lg font-bold uppercase text-sm tracking-widest hover:bg-slate-800 transition-colors">
+                                Get Directions
+                            </button>
+</div>
+</div>
+<div class="lg:w-1/2 min-h-[400px] relative bg-slate-200" data-location="Felixstowe, UK" style="">
+<img alt="Map of Felixstowe area" class="w-full h-full object-cover grayscale opacity-50" data-alt="Abstract minimalist map graphic of Felixstowe coastal area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7K92aNSC3i0p_EgVGoIPOHsr3pDyfNaO0u6PGK0D8pDJW5n3XCCdtmhrZ-_4c2dNkfj18kyZS2IV94g40OLTF5zZpO4s2vqfl2Jv9x1pNWqBY9bIQNTvjB10NylvceU41nUF99OXqq2yHq0lHQgX2kAfiLBtONIzyYp609Kv4ewvf0G3yT8m1-I4jykZPXbh4_SJTux1BlCvxPhDV9lQrQ-sPRcFqfqeUS_F15Gn-WyGasPjsXmN0dezgUKJbL6TUz9VFXHsqpU7T"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="size-12 bg-accent-red rounded-full flex items-center justify-center text-white animate-bounce shadow-xl">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white py-16 border-t-8 border-accent-red">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+<h2 class="text-2xl font-black uppercase tracking-tight">Felixstowe Workshop</h2>
+</div>
+<p class="text-slate-300 max-w-sm mb-8 leading-relaxed">
+                    Committed to professional, organized, and transparent vehicle maintenance in Felixstowe. We set the standard for local workshop excellence.
+                </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-red transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="size-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-red transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-[0.2em] text-sm mb-6 text-accent-red">Services</h4>
+<ul class="space-y-4 text-slate-300 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">MOT Testing</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Full Servicing</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Brake Repairs</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Diagnostic Checks</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Tyre Fitting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-[0.2em] text-sm mb-6 text-accent-red">Information</h4>
+<ul class="space-y-4 text-slate-300 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Book Online</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Vehicle Sales</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 lg:px-20 mt-16 pt-8 border-t border-white/10 text-center text-slate-400 text-xs tracking-widest">
+            © 2024 FELIXSTOWE WORKSHOP LTD. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</div>
+</body></html>
