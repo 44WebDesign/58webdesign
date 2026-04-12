@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>poxyresin | The Dark Artisan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#1e1e1e",
+                        "background": "#0a0a0a",
+                        "surface": "#0a0a0a",
+                        "surface-container-highest": "#2a2a2a",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "primary-fixed-dim": "#ffb0ca",
+                        "on-primary-fixed-variant": "#8d004e",
+                        "tertiary": "#705d00",
+                        "on-secondary-container": "#a0a0a0",
+                        "secondary-container": "#222222",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#151515",
+                        "surface-bright": "#1a1a1a",
+                        "on-surface-variant": "#d5b9c1",
+                        "surface-variant": "#2a2a2a",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#222222",
+                        "on-tertiary-container": "#ffe16d",
+                        "secondary-fixed-dim": "#474747",
+                        "on-surface": "#f1f1f1",
+                        "on-secondary": "#1a1c1c",
+                        "primary-container": "#e10080",
+                        "on-tertiary": "#1a1c1c",
+                        "tertiary-container": "#c9a900",
+                        "surface-container-lowest": "#000000",
+                        "secondary": "#a0a0a0",
+                        "on-primary-container": "#fffbff",
+                        "inverse-on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#3e001f",
+                        "inverse-surface": "#f1f1f1",
+                        "outline-variant": "#5b3f48",
+                        "tertiary-fixed": "#ffe16d",
+                        "on-tertiary-fixed": "#221b00",
+                        "surface-dim": "#0a0a0a",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "on-secondary-fixed-variant": "#c6c6c6",
+                        "inverse-primary": "#ffb0ca",
+                        "primary": "#FF1493",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#f1f1f1",
+                        "on-background": "#f1f1f1",
+                        "surface-container-low": "#0f0f0f",
+                        "outline": "#8f6e78",
+                        "primary-fixed": "#ffd9e3",
+                        "surface-tint": "#FF1493",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0a0a0a; color: #f1f1f1; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+        .resin-gradient-text {
+            background: linear-gradient(90deg, #FFD700, #FF8C00, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .resin-glow { box-shadow: 0 0 40px -10px rgba(255, 20, 147, 0.3); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white">poxyresin</div>
+<div class="hidden md:flex gap-8 items-center font-plus-jakarta text-sm tracking-tight font-medium">
+<a class="text-[#FF1493] border-b-2 border-[#FF1493]/30 pb-1" href="#">Shop</a>
+<a class="text-zinc-400 hover:text-[#FF1493] transition-colors duration-300" href="#">Resin Types</a>
+<a class="text-zinc-400 hover:text-[#FF1493] transition-colors duration-300" href="#">Gallery</a>
+<a class="text-zinc-400 hover:text-[#FF1493] transition-colors duration-300" href="#">Guides</a>
+<a class="text-zinc-400 hover:text-[#FF1493] transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex gap-6 items-center">
+<button class="scale-95 active:scale-90 transition-transform text-zinc-400 hover:text-[#FF1493]">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="scale-95 active:scale-90 transition-transform text-zinc-400 hover:text-[#FF1493]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="scale-95 active:scale-90 transition-transform text-zinc-400 hover:text-[#FF1493]">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 max-w-7xl mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="text-[#FF1493] font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Master the Pour</span>
+<h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-6 leading-[0.9]">
+                        The <span class="resin-gradient-text">Artisan's</span> Choice.
+                    </h1>
+<p class="text-zinc-400 text-lg md:text-xl mb-10 max-w-lg leading-relaxed">
+                        Crystalline clarity meets industrial strength. Designed for creators who demand perfection in every molecule.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#B40065] text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform resin-glow">
+                            Explore Collections
+                        </button>
+<button class="border-2 border-zinc-700 text-white px-10 py-4 rounded-full font-bold hover:bg-zinc-800 transition-colors">
+                            Watch the Guide
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-10 bg-gradient-to-tr from-[#B40065]/20 to-transparent blur-3xl rounded-full"></div>
+<img class="rounded-xl w-full h-[600px] object-cover shadow-2xl relative z-10 transform lg:rotate-2" data-alt="dramatic close-up of vibrant pink and orange liquid resin being poured in a dark professional studio with atmospheric lighting and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW0VKWxBeUh_CvQw-6rmgO635cyUOye_4B_cQkGotaAJQhpdAlge5gaP5X8ktpTAAlXC8JcltJLUNu3na33xYzWSHJujtDFe7LgRUL0uGpMroZb39uEJnrUtHddoyVO4WiACdtimil3mkc0oNKzfHBQMZsyO0XTWUWn-My9YMRalyvDaSFY7DePBI6C2y6JIw4RGUrmYYvxUHJ16fa3rTggd_AeVXDa5cUFqW0WpVScq0daMb0Mf0474P-Xoms1dIu5nNIApZm5nN3"/>
+</div>
+</div>
+</section>
+<!-- Product Bento Grid -->
+<section class="px-8 py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-bold tracking-tight mb-2">Signature Formulas</h2>
+<p class="text-zinc-500">Engineered for clarity, durability, and ease of use.</p>
+</div>
+<a class="text-[#FF1493] font-semibold border-b-2 border-[#FF1493]/30" href="#">View All Products</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Deep Pour -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-zinc-900 aspect-[16/9]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="ultra clear liquid resin block showing depth and professional grade transparency in a dark minimalist setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Iom8SOrYGXgzjUBO3dPcSqZi83UfuTlI9_9TwPujaKw2dfCwiC4jUeyapLIZApCA8Tlj1rIJxZ-cbwpFmzy6zIbPZRkxbYw55SaiUJ6Hkyty_KP32nv1Tc94-hNc8ILcEVO3zLb9qMAz8SRtVaSzcfkva5lgKGqZhMk9jhLduFsHM248rkpxlLAsUcGsCpzEn9kdk9oEBk-Ajh47EIcSQLIYn1igI0d3tWny2wtNPz1Gz7cPM-6pk9_o-Y_DYZ0FncWC9k9qi7jB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<h3 class="text-3xl font-bold mb-2">Deep Pour Master</h3>
+<p class="text-zinc-400 mb-6 max-w-sm">Cast up to 4 inches in a single pour with zero bubble retention.</p>
+<span class="inline-flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all">
+                                Shop Formula <span class="material-symbols-outlined">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Fast Cure -->
+<div class="group relative overflow-hidden rounded-xl bg-zinc-900">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="colorful swirling epoxy resin art with intense gold and magenta pigments in a high-gloss finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwxuLYF-mewI05cWsXL-jJiCUAv-dKBX9BZltZI_WmgpyCuJT2e61UU0KlAEAlMbSDL0KEoEstgIRtYTEHN_OBBP_zhQc8xzvrWGE4RBd6AfwZ0dUXxXS6ia0ifm34AxuHoC2IzHDWUoyjOsLu_Q5Z-nyN3UvI05GWzCVPBSbB-fNslVNvliv56Kh2vPPkA7vuUBSViP4g3R4xI7XGwWU0O4CE7hQqRqqbgWRHeDtQRQhxPtHHUghvG3alGYkkZg2yfvxnreBlVOFt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-2xl font-bold mb-2">Fast-Cure Art</h3>
+<p class="text-zinc-400 text-sm mb-4">Set in 12 hours. High UV resistance.</p>
+<span class="text-[#FF1493] font-bold">Shop Now</span>
+</div>
+</div>
+<!-- UV Protect -->
+<div class="group relative overflow-hidden rounded-xl bg-zinc-900">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="abstract liquid textures with deep purple and vibrant pink highlights under professional studio flash" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeWpWVEvlyeE9Tqh-K4KphiNjYDLjJQcG3_UKjKrhMzr_60SAuvjWTXgdfPUPe1AaHZrUASbkrwwISXwJ_IlmG_dgcW20my43pbVPCKtb3CtVyBNPRSCgyggVCD9qZB3YUxEK6vO7h6PND5AHsxEJvEynSr_kCVst_zQ6LyCNbFYmv3O7YEXdB7I6jE4s-S5rmJVzf8hfAdnCJpszicdBNV2RPyU-ynDYbEW1crhV4Tg8YyvjzRI9XV_DSZPXUm0ore2Y3JdjdW-1t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-2xl font-bold mb-2">UV Shield+</h3>
+<p class="text-zinc-400 text-sm mb-4">Non-yellowing protection for years.</p>
+<span class="text-[#FF1493] font-bold">Shop Now</span>
+</div>
+</div>
+<!-- Accessory Pack -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-zinc-900 aspect-[16/7]">
+<div class="absolute inset-0 bg-gradient-to-r from-zinc-900 to-zinc-900/40 z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="professional resin artist tools, pigments, and mixing cups arranged on a dark workshop table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFxkfvf133L4O8G5Q1R0WQ4P9qpJfkAhAzRpLcG0DvcDepVReNx83xO2WxhE46hrxzCwbj0mOI9pf7Ma4S_2gcJMLF0R5xLPbOb1VELTfPhzk90cZXmEHb0CIAps4xCxXcl3BJpE-PmOdNwJiAT--5EK1IoCOR0URPHVMi54h2HqkmDRrlb1a-DuoQ-P5CLrHXGjH0iK7T67WNoicDgAH6kJd-WI3VknX8AB3K2EBT4J1uQ89n_ZwsMfXftsDusSEzdgsztRYUpMCm"/>
+<div class="relative z-20 p-10 flex flex-col justify-center h-full">
+<h3 class="text-3xl font-bold mb-2">Creator Essentials</h3>
+<p class="text-zinc-400 mb-6 max-w-sm">Premium pigments, precision scales, and ergonomic mixing tools.</p>
+<button class="w-fit bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-zinc-200 transition-colors">
+                                Browse Gear
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs / Featured Section -->
+<section class="px-8 py-32 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-[#FF1493]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#FF1493]" data-icon="opacity">opacity</span>
+</div>
+<h4 class="font-bold text-xl">Low Viscosity</h4>
+<p class="text-zinc-500 text-sm">Flows like water to reach every corner of your complex molds.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-[#FF1493]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#FF1493]" data-icon="flare">flare</span>
+</div>
+<h4 class="font-bold text-xl">High Gloss</h4>
+<p class="text-zinc-500 text-sm">Cures to a mirror-like finish without the need for intensive polishing.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-[#FF1493]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#FF1493]" data-icon="shield">shield</span>
+</div>
+<h4 class="font-bold text-xl">Rock Hard</h4>
+<p class="text-zinc-500 text-sm">Shore D hardness rating of 85+. Scratch and heat resistant.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-[#FF1493]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#FF1493]" data-icon="eco">eco</span>
+</div>
+<h4 class="font-bold text-xl">VOC Free</h4>
+<p class="text-zinc-500 text-sm">No toxic fumes. Safer for your home studio environment.</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-5xl font-bold tracking-tighter mb-8 leading-tight">Engineered for the <span class="text-[#FF1493]">Perfectionist.</span></h2>
+<p class="text-zinc-400 text-lg mb-8">
+                        Every batch of poxyresin undergoes rigorous quality testing. We measure viscosity, thermal peak, and tensile strength to ensure your masterpiece lasts a lifetime.
+                    </p>
+<div class="p-8 bg-zinc-900/50 rounded-xl border border-zinc-800">
+<div class="flex items-center gap-4 mb-4">
+<div class="flex -space-x-2">
+<img class="w-10 h-10 rounded-full border-2 border-zinc-900" data-alt="portrait of a male resin artist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXCPI4qgRqT14zErAChrrXchRJUABN15YpuGGUY39ZZiZlcQDy9j9Df2nMcot4t-joSJgc_hIwQOw7rkEwdOdmFQk_03bsERsLvvv2zUudBrbazxj05OlL0IOPXqnlYwM7t1oPfFROt8tz4IZ2dW8abPe8cKedcGg9BWn2T06jItR2AKOnitpYdELISjX0iH9h7AzwJnP26_-t3DPDCdJHnT9Hjgj4Uj5VmFxLQFPemXlmQCV82CZ5YMzwpF9Qinrg8_kFSJpARnJ8"/>
+<img class="w-10 h-10 rounded-full border-2 border-zinc-900" data-alt="portrait of a female resin creator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_FuiTsdt9EMjcvZM0Nv0CNKbxQ9GHB4eEHRxEN24AeNBsUy3os2O1EaMQ9qKbXELGWY112xUuOC5t7yw4QGZBBleB1wzsbhp9mSO04WrqiMieY3WTxT1deojxuW_Q-FZhXxi-Z7L8qxlZix2CA5QGKSGWgSrvpr9B-zqEqFD6YWD_eYGY_9QRHkb7hVgoxuAnx-eJSlETPxBElQhvVyWeCJKFYe9OYzg8HUVlHgjRnnu_kSnixQTIfEHUQoQW0oRnvvoLuxssguQa"/>
+<img class="w-10 h-10 rounded-full border-2 border-zinc-900" data-alt="portrait of a professional artist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDNtNpd84domDvGfosY42Zj6FQi6-BUGElrtZu7R522NwCIuk6Vdplrxc9jZz-vFx3SKxanOo5xx9nqkqTS8rDAKtKCk-ZnzjeInIgx3wPcBicGG8LrRCejv7dqzp0PfmQnOVFxhTxVA7csakoj1la6yZW3W5MzCdLIWQUzDrsDE4u0MWLU7XE4keA2vNggYrGNRuMZbzka8ijvfwCw2_zhD-hb6SqBxl7GcpYoqPgxauyv-z7tie_210FCHJcfdgLs2JbVT65h7ht"/>
+</div>
+<span class="text-sm font-medium">Trusted by 10k+ Creators</span>
+</div>
+<p class="text-zinc-300 italic">"The bubble release on the Deep Pour formula is unlike anything I've used in 15 years of woodworking."</p>
+<p class="mt-4 font-bold text-sm">— Marcus V., Master Woodworker</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="px-8 py-24 mb-20">
+<div class="max-w-5xl mx-auto bg-gradient-to-br from-zinc-900 to-black rounded-xl p-12 relative overflow-hidden border border-zinc-800">
+<div class="absolute top-0 right-0 w-64 h-64 bg-[#FF1493] opacity-5 blur-[120px]"></div>
+<div class="relative z-10 text-center">
+<h2 class="text-4xl font-bold mb-4">Join the Artisan Network</h2>
+<p class="text-zinc-400 mb-10 max-w-lg mx-auto">Get exclusive access to limited-run pigments, early product launches, and professional techniques.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-1 bg-zinc-800 border-none rounded-full px-6 py-4 text-white focus:ring-2 focus:ring-[#FF1493]" placeholder="Enter your email" type="email"/>
+<button class="bg-[#FF1493] text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition-opacity">
+                            Subscribe
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 mt-20 bg-zinc-900">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto font-plus-jakarta text-sm leading-relaxed">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-bold tracking-tighter text-white mb-4 block">poxyresin</span>
+<p class="text-zinc-500 mb-6">Crafting the future of artistic mediums through molecular precision and designer aesthetics.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-[#FF1493]">public</span>
+<span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-[#FF1493]">share</span>
+<span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-[#FF1493]">contact_support</span>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-400 hover:text-[#FF1493] transition-all" href="#">Shop</a></li>
+<li><a class="text-zinc-400 hover:text-[#FF1493] transition-all" href="#">Resin Types</a></li>
+<li><a class="text-zinc-400 hover:text-[#FF1493] transition-all" href="#">Gallery</a></li>
+<li><a class="text-zinc-400 hover:text-[#FF1493] transition-all" href="#">Guides</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-400 hover:text-[#FF1493] transition-all" href="#">Contact</a></li>
+<li><a class="text-zinc-400 hover:text-[#FF1493] transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-400 hover:text-[#FF1493] transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Newsletter</h4>
+<p class="text-zinc-500 mb-4 text-xs uppercase tracking-widest font-bold">Stay Updated</p>
+<div class="flex">
+<input class="bg-zinc-800 border-none w-full rounded-l-lg p-3 text-xs focus:ring-0" placeholder="Email address" type="text"/>
+<button class="bg-zinc-700 p-3 rounded-r-lg hover:bg-[#FF1493] transition-colors">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-zinc-800 text-center text-zinc-500">
+<p>© 2024 poxyresin. All rights reserved. Crafted for creators.</p>
+</div>
+</footer>
+</body></html>
