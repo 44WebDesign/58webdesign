@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SOVEREIGN | Suffolk Holiday Homes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "on-primary-container": "#5e4700",
+                    "on-primary-fixed": "#251a00",
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-background": "#1c1b1b",
+                    "secondary": "#5e5e5e",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-tertiary-container": "#494a4b",
+                    "surface-container-high": "#eae7e7",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container": "#f0eded",
+                    "surface-container-low": "#f6f3f2",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "tertiary": "#5d5f5f",
+                    "secondary-container": "#e2e2e2",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#b9baba",
+                    "surface-variant": "#e5e2e1",
+                    "surface-bright": "#fcf9f8",
+                    "on-secondary-fixed-variant": "#474747",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#d2c5ad",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#5a4300",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface": "#fcf9f8",
+                    "primary-container": "#e6b325",
+                    "on-secondary-container": "#646464",
+                    "outline": "#807661",
+                    "on-surface-variant": "#4e4634",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "primary": "#775a00",
+                    "inverse-primary": "#f3bf32",
+                    "surface-tint": "#775a00",
+                    "primary-fixed": "#ffdf99",
+                    "primary-fixed-dim": "#f3bf32",
+                    "secondary-fixed": "#e2e2e2",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .golden-gradient {
+            background: linear-gradient(135deg, #775A00 0%, #E6B325 100%);
+        }
+        .slab-shadow {
+            box-shadow: 0px 24px 48px rgba(28, 27, 27, 0.08);
+        }
+        ::selection {
+            background: #e6b325;
+            color: #1c1b1b;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 dark:bg-[#1C1B1B] bg-[#0A2635]">
+<nav class="flex justify-between items-center px-8 h-20 w-full">
+<div class="flex items-center gap-12">
+<div class="text-2xl font-black tracking-tighter text-[#1C1B1B] dark:text-[#FCF9F8] font-headline uppercase">
+<img alt="SOVEREIGN Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhJUlkwKIJ8aW2p_F2sgRE0GH-sQyFIgLmUCZ2dyDXbo4nlWsYYgI-g81qoxgoPKkMcuKBkkyXXRv1dlyf2AZ-NQ3umUrJfDLoMRxU5BugeQDEoBbu9yfECvI5AjY1IrPt0UYgzuq0stN4JYD6qrAGqqOPt8XV8dTvmBdH9ESQLSQKrbRQYx0bNDE_rfHquDfUwvmrJkdBx1_5Z0uKq17frL7a1e2mZENHAFHSXLbSgDlaUmX4kbcoqCvktak_Qs_CdFoBHd8z0"/>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline font-bold tracking-tighter uppercase text-white border-b-4 border-primary-container py-1" href="#">Destinations</a>
+<a class="font-headline font-bold tracking-tighter uppercase opacity-80 transition-colors duration-150 py-1 text-white hover:text-primary-container" href="#">Villas</a>
+<a class="font-headline font-bold tracking-tighter uppercase opacity-80 transition-colors duration-150 py-1 text-white hover:text-primary-container" href="#">Concierge</a>
+<a class="font-headline font-bold tracking-tighter uppercase opacity-80 transition-colors duration-150 py-1 text-white hover:text-primary-container" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-2xl scale-95 active:scale-90 transition-transform text-white">search</button>
+<button class="golden-gradient text-on-primary px-8 py-3 font-headline font-bold tracking-tighter text-sm uppercase transition-all duration-150 hover:-translate-y-1 active:scale-95 slab-shadow">
+                BOOK NOW
+            </button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[90vh] w-full overflow-hidden flex items-end">
+<div class="absolute inset-0 z-0">
+<img alt="Atmospheric view of the Suffolk coastline with rolling dunes and morning mist" class="w-full h-full object-cover brightness-75" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgcJjqkx6uJ974qjGt-dzhxjvl37KT56YDJ522cNtON7LFgj7HX3-eqmhzOSdxT8ceLis8amUYjJulmMlDjSxyXKgjQubmIjvoqCzaoxMKfDULJ8O1V2psFtlcWW57lHyIq8O0qnNIjW2iHnso1Z8VuhpIYB1r1ixlnQZi_pnlbD8xk5CDDpVqoWnV1LugUAHcZmdDaPwU_16b8Mq22I9FBLy9HIC-JPzkuu6ZCMb-bdKEVJSDf-dTQDKKqM0-Uw0YZ91wLsIgJJw"/>
+</div>
+<div class="relative z-10 p-8 md:p-16 w-full flex flex-col md:flex-row justify-between items-end gap-8">
+<h1 class="font-headline font-black text-6xl md:text-9xl text-white leading-[0.85] tracking-tighter uppercase max-w-4xl">
+                THE<br/>ULTIMATE<br/><span class="text-primary-container">SUFFOLK</span><br/>RETREAT
+            </h1>
+<!-- Search Bar Module -->
+<div class="bg-surface-container-lowest p-1 slab-shadow w-full md:w-[480px]">
+<div class="p-8 space-y-6">
+<span class="font-headline font-bold tracking-tighter uppercase text-primary text-sm">Find Your Sanctuary</span>
+<div class="space-y-4">
+<div class="bg-surface-container-highest p-4 flex flex-col gap-1 border-b-2 border-transparent focus-within:border-primary transition-all">
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Location</label>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-headline font-bold uppercase placeholder:text-outline-variant" placeholder="Suffolk Coast, Heritage Coast..." type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-highest p-4 flex flex-col gap-1 border-b-2 border-transparent focus-within:border-primary transition-all">
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Arrival</label>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-headline font-bold uppercase placeholder:text-outline-variant" placeholder="Select Date" type="text"/>
+</div>
+<div class="bg-surface-container-highest p-4 flex flex-col gap-1 border-b-2 border-transparent focus-within:border-primary transition-all">
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Guests</label>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-headline font-bold uppercase placeholder:text-outline-variant" placeholder="How many?" type="text"/>
+</div>
+</div>
+</div>
+<button class="w-full golden-gradient py-6 font-headline font-black tracking-widest text-white uppercase text-lg slab-shadow transition-all hover:-translate-y-1 active:scale-[0.98]">
+                        SEARCH AVAILABILITY
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section -->
+<section class="bg-surface py-24 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-start gap-16 mb-24">
+<div class="md:w-1/3">
+<span class="block h-1 w-24 bg-primary mb-8"></span>
+<h2 class="font-headline font-black text-5xl tracking-tighter uppercase leading-none">A NEW<br/>STANDARD OF<br/>LEISURE</h2>
+</div>
+<div class="md:w-2/3">
+<p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-2xl">
+                    At Sovereign, we reject the ordinary. Our collection of Suffolk holiday homes is meticulously curated for those who demand architectural excellence, uncompromising privacy, and a connection to the heritage of the East Coast. 
+                </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto">
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container-low">
+<img alt="Minimalist beachfront villa with large windows facing the Aldeburgh sea" class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHYSYUhNx3ZxmzfK5O1RHcEVASSbdh4DIVToUw9LJpCUx1u56mpxCJ-tJC7-IxF8pq8G_gllUDCUQbzXyuHkq8TBW-pyrkfX648_n4KeCnYSKGQGhkXA-7FX--6e8QSIewGb6bvNv3IzHWCYNFGSjQFPYFmypyIpkQsCR62oJpKE476-t3lhPBx-1_yqWp7amTbZdqLvBvXzZNnam46egigenJb_remBEXSGeROMwC1Rw_XEqw2LPyovCU6OuxEAZhciCcuY55eSE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent flex flex-col justify-end p-12">
+<span class="text-primary-container font-headline font-bold uppercase tracking-widest mb-2">Featured Property</span>
+<h3 class="text-white font-headline font-black text-4xl tracking-tighter uppercase mb-6">THE ALDEBURGH MONOLITH</h3>
+<button class="w-fit border-2 border-white text-white px-8 py-3 font-headline font-bold tracking-tighter uppercase hover:bg-white hover:text-on-surface transition-all">VIEW PROPERTY</button>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="h-1/2 bg-primary p-12 flex flex-col justify-between">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">stars</span>
+<div>
+<h4 class="text-white font-headline font-black text-3xl tracking-tighter uppercase leading-none mb-4">PLATINUM<br/>CONCIERGE</h4>
+<p class="text-white/80 font-body text-sm uppercase tracking-widest font-bold">24/7 Service Included</p>
+</div>
+</div>
+<div class="h-1/2 bg-surface-container-highest relative group overflow-hidden">
+<img alt="Premium local organic produce and artisanal goods on a clean wooden table" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwxTXzSranvNSvWUSCgv5fIY3I0TIgBemjdfC_4mPoEG28GJi5EwdenjW7e_QsrpcvaHPiyE70NhJOSMpvsnM7qez-LVQWfSb5mJDtoZimenJDxVVpV_IvsE4cj6z3HGiqe9MMDp5uFF5WCXZ5S9f426B03jWw00qQs9p-AaVbhxUK8rI6rQYH74-Ovhp_h3PyvP_lxFBteS9asQSMI_oeb2B5KyJxqYVll-Jr2GWWh0oBgNrGvrMPa_BT1GRnPnv1MZYEyT1IeXQ"/>
+<div class="absolute inset-0 bg-on-surface/40 flex items-center justify-center">
+<h4 class="text-white font-headline font-black text-2xl tracking-tighter uppercase">THE SOVEREIGN EDIT</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Destination Slabs -->
+<section class="bg-surface-container-low py-24">
+<div class="px-8 max-w-7xl mx-auto mb-16 flex justify-between items-end">
+<h2 class="font-headline font-black text-5xl tracking-tighter uppercase">EXPLORE REGIONS</h2>
+<a class="font-headline font-bold text-primary tracking-tighter uppercase border-b-2 border-primary" href="#">ALL DESTINATIONS</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 px-8 max-w-7xl mx-auto">
+<!-- Southwold -->
+<div class="bg-surface group relative overflow-hidden h-[500px]">
+<img alt="Iconic Southwold lighthouse standing tall against a moody coastal sky" class="w-full h-full object-cover brightness-75 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDreYQ_hlJF0ZrRoP_ItJMMtLEcTXwo27aQGThEDwT7ky_qwGQYMuMC5cFhNN2E374YwyfdxAjojJ3wXz9Ah5oH2aN07dA5bsy1aaX9hBZcQnm0KEgpXkeZefR_sef8eJanzcKJMrr8KR2-EKNABsNAIgXS4_XGLpEdc3D_lIxhy8L3krCnTyG_LJ9TH1_7mvR9IqmEiWId-F9aFGGkbE845D3Vb3HvkUrko6ktB5Mq3ESx7yEKsm3Qs4gnwO2cI3TUxBhkAPqs9f8"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-on-surface/90 to-transparent">
+<h3 class="text-white font-headline font-black text-3xl tracking-tighter uppercase mb-4">SOUTHWOLD</h3>
+<p class="text-white/60 mb-8 font-body text-sm leading-relaxed">Iconic piers, pastel beach huts, and the architectural heritage of the classic coast.</p>
+<span class="text-primary-container font-headline font-bold uppercase tracking-widest flex items-center gap-2">14 VILLAS <span class="material-symbols-outlined">arrow_forward</span></span>
+</div>
+</div>
+<!-- Dunwich -->
+<div class="bg-on-surface group relative overflow-hidden h-[500px]">
+<img alt="Serene coastal heathland with purple heather and distant sea views" class="w-full h-full object-cover brightness-75 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk9nQ27OCHBTtS_tCwobbqXJjGmH9UXd-rG-pfwwvm-CaBjb_fWhhndmu7zTpOwKd4o4YkF7lyYIsinFcD0ldfv08_tg75Uxmn0I3batVfomjBVgl6V2qkWR0a7h83paHDwwPQkxRvVQ7YONONK2-tooAWD4wG2XF0jFMzVWdINVZ4UZoBWvpGhaGupc57WuGzNz_mOODTqUAUsot6vKejcNQ9pzTE26wl88Hz5tydfjRmPTufp7Leac84uo1sJ2p7uI36hNLJpwg"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-on-surface/90 to-transparent">
+<h3 class="text-white font-headline font-black text-3xl tracking-tighter uppercase mb-4">DUNWICH HEATH</h3>
+<p class="text-white/60 mb-8 font-body text-sm leading-relaxed">Untamed landscapes, heather-clad cliffs, and modern hideaways lost in nature.</p>
+<span class="text-primary-container font-headline font-bold uppercase tracking-widest flex items-center gap-2">8 VILLAS <span class="material-symbols-outlined">arrow_forward</span></span>
+</div>
+</div>
+<!-- Woodbridge -->
+<div class="bg-surface group relative overflow-hidden h-[500px]">
+<img alt="Calm river Deben at dusk with small sailboats anchored" class="w-full h-full object-cover brightness-75 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB0FVM1VbG_jdYKl6Yc0t4IccnqUi3Yiz-SBLFgm3qH49qZKuAVJqsbCv0KwyaEpQJGyjCpDjD44pW1uh6KGm_OUqrcM8fPTod1tnpvceRWZRo0aR65rYZt439J9Sj6iX3pzcxpBnmPqiqHUxbNQA2orV3BTORUKjvQATLEWPwdMWz_v7ENnXFhP5dKUzFVC-eZPlCsQ7U-T1JAn1hRXfoMHwn9MOfQceCIXbzAu2vdOCaqDtgGxveeNxqrURWtCXv4aoqYaLrGHU"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-on-surface/90 to-transparent">
+<h3 class="text-white font-headline font-black text-3xl tracking-tighter uppercase mb-4">WOODBRIDGE</h3>
+<p class="text-white/60 mb-8 font-body text-sm leading-relaxed">Riverside tranquility meeting sophisticated town living and artisan culture.</p>
+<span class="text-primary-container font-headline font-bold uppercase tracking-widest flex items-center gap-2">21 VILLAS <span class="material-symbols-outlined">arrow_forward</span></span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 flex flex-col items-center text-center bg-surface-container-highest relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img alt="Subtle texture of sea spray and coastal stone" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBskLAHX6EXiN6fWc9-FpM6C19YVEU6T5-mIWjUdRjSmIA0s1tFx0i656YoFm1X99eQnJI3VIwKGL0qLDGU33sdtFJHSkCSLoMAax2TP4QttI84lZq8urqUngG8LlyqMTWqe_CsWN8lMf_ko5Ok5RYDtRx_jHBvpaJGgNliwqbpLtASQo8knWLaHgARCGHizVt9RG_MtnpVH0qKPRzlPNa4z1z4lWnZCkwPxI1vVHiFJBxB4CYlJ1NGMV6x6R1LwQG6hGt1JCQp98w"/>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline font-black text-6xl md:text-8xl tracking-tighter uppercase leading-[0.9] mb-12 max-w-4xl">
+                YOUR SOVEREIGN<br/><span class="text-primary">JOURNEY</span> STARTS<br/>TODAY.
+            </h2>
+<button class="golden-gradient text-white px-16 py-8 font-headline font-black tracking-widest text-xl uppercase slab-shadow hover:-translate-y-2 transition-transform">
+                REQUEST A BROCHURE
+            </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F6F3F2] dark:bg-[#1C1B1B] border-t-4 border-[#775A00] w-full py-16">
+<div class="flex flex-col md:flex-row justify-between items-start px-8 max-w-7xl mx-auto gap-12">
+<div class="space-y-8 max-w-sm">
+<div class="text-xl font-bold text-[#1C1B1B] dark:text-[#FCF9F8] font-headline uppercase tracking-tighter">
+<img alt="SOVEREIGN Logo" class="h-10 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ADBb0uhJUlkwKIJ8aW2p_F2sgRE0GH-sQyFIgLmUCZ2dyDXbo4nlWsYYgI-g81qoxgoPKkMcuKBkkyXXRv1dlyf2AZ-NQ3umUrJfDLoMRxU5BugeQDEoBbu9yfECvI5AjY1IrPt0UYgzuq0stN4JYD6qrAGqqOPt8XV8dTvmBdH9ESQLSQKrbRQYx0bNDE_rfHquDfUwvmrJkdBx1_5Z0uKq17frL7a1e2mZENHAFHSXLbSgDlaUmX4kbcoqCvktak_Qs_CdFoBHd8z0"/>
+</div>
+<p class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#1C1B1B] opacity-60">
+                The authoritative guide to Suffolk's most exclusive holiday residences. Architecturally significant homes, curated with precision.
+            </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-16">
+<div class="space-y-4">
+<span class="font-headline font-bold text-primary text-xs uppercase tracking-[0.2em]">Navigation</span>
+<ul class="space-y-2">
+<li><a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#1C1B1B] dark:text-[#FCF9F8] opacity-60 hover:opacity-100 transition-opacity" href="#">Destinations</a></li>
+<li><a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#1C1B1B] dark:text-[#FCF9F8] opacity-60 hover:opacity-100 transition-opacity" href="#">Villas</a></li>
+<li><a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#1C1B1B] dark:text-[#FCF9F8] opacity-60 hover:opacity-100 transition-opacity" href="#">Concierge</a></li>
+<li><a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#1C1B1B] dark:text-[#FCF9F8] opacity-60 hover:opacity-100 transition-opacity" href="#">About</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<span class="font-headline font-bold text-primary text-xs uppercase tracking-[0.2em]">Legal</span>
+<ul class="space-y-2">
+<li><a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#1C1B1B] dark:text-[#FCF9F8] opacity-60 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#1C1B1B] dark:text-[#FCF9F8] opacity-60 hover:opacity-100 transition-opacity" href="#">Terms of Service</a></li>
+<li><a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#1C1B1B] dark:text-[#FCF9F8] opacity-60 hover:opacity-100 transition-opacity" href="#">Newsletter</a></li>
+<li><a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#1C1B1B] dark:text-[#FCF9F8] opacity-60 hover:opacity-100 transition-opacity" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="px-8 max-w-7xl mx-auto mt-16 pt-8 border-t border-on-surface/5">
+<p class="font-['Inter'] text-xs leading-relaxed tracking-wide text-[#1C1B1B] dark:text-[#FCF9F8] opacity-40">
+            © 2024 THE SOVEREIGN EDITORIAL. ALL RIGHTS RESERVED.
+        </p>
+</div>
+</footer>
+</body></html>

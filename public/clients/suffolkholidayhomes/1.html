@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Suffolk Holiday Homes | Curated Coastal Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#690005",
+                    "surface-bright": "#3a3939",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-tertiary": "#2f3131",
+                    "inverse-primary": "#725c00",
+                    "primary-fixed": "#ffe07d",
+                    "on-surface": "#e5e2e1",
+                    "surface-container": "#201f1f",
+                    "surface-dim": "#131313",
+                    "secondary-container": "#204971",
+                    "surface": "#131313",
+                    "primary-container": "#e5be20",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#d0c6ad",
+                    "on-secondary-fixed-variant": "#204971",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-container": "#604d00",
+                    "on-primary-fixed-variant": "#564500",
+                    "surface-variant": "#353534",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary-fixed": "#e2e2e2",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-fixed": "#231b00",
+                    "on-secondary-fixed": "#001d36",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-container": "#4e5050",
+                    "on-secondary": "#003258",
+                    "tertiary-container": "#c1c2c2",
+                    "surface-tint": "#eac326",
+                    "secondary": "#a4c9f8",
+                    "on-background": "#e5e2e1",
+                    "outline": "#999079",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-highest": "#353534",
+                    "on-secondary-container": "#93b8e6",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#eac326",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary-fixed": "#d1e4ff",
+                    "outline-variant": "#4d4633",
+                    "on-primary": "#3b2f00",
+                    "background": "#131313",
+                    "secondary-fixed-dim": "#a4c9f8",
+                    "primary": "#ffdb5c",
+                    "tertiary": "#dddede"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Work Sans"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(19, 19, 19, 0.4), rgba(19, 19, 19, 0.95));
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-xl flex justify-between items-center px-12 py-6 bg-[#0a2a33]/80">
+<div class="text-2xl font-headline tracking-tight text-[#ffdb5c]"><img alt="Suffolk Holiday Homes Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhJUlkwKIJ8aW2p_F2sgRE0GH-sQyFIgLmUCZ2dyDXbo4nlWsYYgI-g81qoxgoPKkMcuKBkkyXXRv1dlyf2AZ-NQ3umUrJfDLoMRxU5BugeQDEoBbu9yfECvI5AjY1IrPt0UYgzuq0stN4JYD6qrAGqqOPt8XV8dTvmBdH9ESQLSQKrbRQYx0bNDE_rfHquDfUwvmrJkdBx1_5Z0uKq17frL7a1e2mZENHAFHSXLbSgDlaUmX4kbcoqCvktak_Qs_CdFoBHd8z0"/></div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-[#ffdb5c] font-bold border-b-2 border-[#ffdb5c] pb-1 text-xs tracking-widest uppercase" href="#">Discover</a>
+<a class="text-white/90 font-medium hover:text-[#ffdb5c] transition-colors duration-500 text-xs tracking-widest uppercase" href="#">Our Homes</a>
+<a class="text-white/90 font-medium hover:text-[#ffdb5c] transition-colors duration-500 text-xs tracking-widest uppercase" href="#">The Suffolk Guide</a>
+<a class="text-white/90 font-medium hover:text-[#ffdb5c] transition-colors duration-500 text-xs tracking-widest uppercase" href="#">Journal</a>
+<a class="text-white/90 font-medium hover:text-[#ffdb5c] transition-colors duration-500 text-xs tracking-widest uppercase" href="#">Concierge</a>
+</div>
+<button class="bg-primary-container text-on-primary px-8 py-3 text-xs font-bold tracking-widest uppercase hover:opacity-80 transition-opacity duration-500 rounded-sm">
+            Book Now
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Suffolk coast" class="w-full h-full object-cover" data-alt="Cinematic wide shot of a misty Suffolk coastline with tall sea grass in foreground and a moody blue ocean at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvgJ0B0FEZBcaQehrjXqWvKww9_OCyT1baHYDZ93M1QIFh1vtsZsqyPkd0C9zyd2NNAISBtiCHLQnaeImReQlNxlzo_axLUWkjoCTwtq6NcT-jrOHiLHPW5L5VKe1GErqE1xMDjFZaDCbwoPdl5SvroHbBIaOemi9xDBi-7ABoePXGUkrQRDUmJm30MniuoGYSkZLJwlqa6wq_kns53d1OmztzhB24hsM2Zj_bI_K_9bsOE-w8grOwdImRveafD7-NL7TMfpj4eV4"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-6">
+<h1 class="text-6xl md:text-8xl font-headline text-on-background mb-6 tracking-tight leading-none">Luxury Holiday Homes in Suffolk</h1>
+<p class="text-lg md:text-xl font-light text-on-surface-variant mb-12 max-w-2xl mx-auto leading-relaxed">Handpicked stays for unforgettable coastal escapes, where heritage meets modern serenity.</p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="w-full md:w-auto bg-primary-container text-on-primary-container px-10 py-5 font-bold tracking-widest uppercase hover:bg-primary transition-all duration-500 rounded-sm">
+                    Browse Properties
+                </button>
+<button class="w-full md:w-auto border border-outline-variant text-primary px-10 py-5 font-bold tracking-widest uppercase hover:bg-white/5 transition-all duration-500 rounded-sm">
+                    Enquire Now
+                </button>
+</div>
+</div>
+<!-- Booking Filter (Sleek Glassmorphic) -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-5xl px-6 z-20">
+<div class="bg-surface-container-highest/70 backdrop-blur-2xl p-2 md:p-4 rounded-sm flex flex-col md:flex-row gap-2 shadow-2xl items-end">
+<div class="flex-1 w-full grid grid-cols-1 md:grid-cols-3 gap-2">
+<div class="flex flex-col p-4 bg-surface-container-lowest/50">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80 mb-1">Location</span>
+<input class="bg-transparent border-none p-0 text-on-background placeholder:text-on-surface-variant/50 focus:ring-0 font-medium" placeholder="Aldeburgh, Southwold..." type="text"/>
+</div>
+<div class="flex flex-col p-4 bg-surface-container-lowest/50">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80 mb-1">Dates</span>
+<input class="bg-transparent border-none p-0 text-on-background placeholder:text-on-surface-variant/50 focus:ring-0 font-medium" placeholder="Add dates" type="text"/>
+</div>
+<div class="flex flex-col p-4 bg-surface-container-lowest/50">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80 mb-1">Guests</span>
+<input class="bg-transparent border-none p-0 text-on-background placeholder:text-on-surface-variant/50 focus:ring-0 font-medium" placeholder="2 Adults, 1 Dog" type="text"/>
+</div>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary-container px-8 py-6 font-bold tracking-widest uppercase hover:opacity-90 transition-all">
+<span class="material-symbols-outlined align-middle mr-2">search</span> Search
+                </button>
+</div>
+</div>
+</header>
+<!-- Why Choose Us: Icon Blocks -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 0;">diamond</span>
+<h3 class="text-xl font-headline text-on-background">Handpicked luxury homes</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">Every property in our collection is personally inspected for exceptional standards.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 0;">explore</span>
+<h3 class="text-xl font-headline text-on-background">Prime Suffolk locations</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">From the dunes of Southwold to the quiet charm of the Orford riverbanks.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 0;">concierge</span>
+<h3 class="text-xl font-headline text-on-background">Personal service</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">Our local team provides a concierge-level experience for every single guest.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+<h3 class="text-xl font-headline text-on-background">Easy booking</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">A seamless digital experience backed by flexible, transparent terms.</p>
+</div>
+</div>
+</section>
+<!-- Featured Properties: Bento/Editorial Grid -->
+<section class="py-32 px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<span class="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4 block">The Collection</span>
+<h2 class="text-5xl md:text-6xl font-headline leading-tight">Featured Residences</h2>
+</div>
+<button class="border-b border-primary text-primary pb-1 font-bold uppercase tracking-widest text-xs hover:opacity-60 transition-all">View Full Portfolio</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Featured Card -->
+<div class="md:col-span-8 group relative aspect-[16/9] overflow-hidden bg-surface-container">
+<img alt="The Boathouse" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Elegant contemporary lake house with floor-to-ceiling glass walls reflecting a calm body of water at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp-FZfYkMnQjT-xs4NiNAxCgCq_fqtJ42Pvn05vVa5cSoKbxnFfjnZRkS7KM9sEIBn9hY37ucKUIGY1PHS9sEfZjVheipvc5mm1oUbtmfO4HXLOZyia34wxrAnIsolRbhsLS3UDX5OMuD1ofzcjm7K_5I3jBQ1tqFZyYpUPoTQeSWiydmDqnQKF1GqGOLK0i34OoG9IooDgldvRogium8U4GEBP4JAlWAkaj-rTFwPuLmZkfTMI3chCsSVQp2TY706lQ_idVivodE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full flex justify-between items-end">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Thorpeness</span>
+<h3 class="text-3xl font-headline text-white mb-2">The Boathouse</h3>
+<p class="text-white/70 font-light max-w-sm mb-6">A Masterpiece of contemporary architecture overlooking the Meare.</p>
+<button class="bg-white text-black px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors">View Details</button>
+</div>
+<div class="text-right text-white">
+<span class="block text-xs uppercase tracking-widest opacity-60">From</span>
+<span class="text-2xl font-headline">£450<small class="text-sm">/night</small></span>
+</div>
+</div>
+</div>
+<!-- Secondary Card -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container">
+<img alt="Sea Glass Cottage" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Traditional lime-washed cottage with a thatched roof and blooming lavender garden in bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIVncRj0jvC_8zAHbQmQHPYn0ThFh_JfJYBoIoOPf7g_8k5oJWf4XpynuePg397Lm8AqhtOG_pHwXurV3LAxMsTuaMiHEEmit_Icxu1k4wsacCflaWfQkcJNpgq_dQairrGLLzIRQ6J-v3rusgaSGZipdLZgLE6ToPojzxARZAc2cmwJWLcjMCj-u4-7UQNE7VtIVmlmS0DIVA3zT2WhyY0NMHkU8-GR9kluU2pqVLNGhS7pQI8dooC0F4BXR1VAobxHO7cvf6pQI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Southwold</span>
+<h3 class="text-2xl font-headline text-white mb-4">Sea Glass Cottage</h3>
+<button class="text-white border-b border-white/30 pb-1 text-xs font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all">View Details</button>
+</div>
+</div>
+<!-- Third Card -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container">
+<img alt="Orchard Barn" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Stunning barn conversion with black timber cladding and large industrial windows set in a wildflower meadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEweZlUPQ1_PEZrA3-B0zYbClqgrG-ImIhshqKiXDKy0m-j_9blHNA5avq8OrweuXtH7ifKSZwVOzNX3gFmV7xkszLZmEW1HQ4onk9KjpoWcUBwmJIAcDSzqgpcQJmrGHn0Nj0V4PQmYYuhOaGXpjUp2sIfZOTkrypm8NpLoZ8jGMKcayZ0hHdcGWgzNyez6sTKNgPUZcnNHZhM9KKu1FvTuhM-PYPnSXxNQiqw4wx9I1HIlYPQHU6NMGtl3tS5Hcy6N6WA2BMuTw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Walberswick</span>
+<h3 class="text-2xl font-headline text-white mb-4">Orchard Barn</h3>
+<button class="text-white border-b border-white/30 pb-1 text-xs font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all">View Details</button>
+</div>
+</div>
+<!-- Fourth Card -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container">
+<img alt="The Lookout" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Luxury loft apartment interior with minimalist decor and a huge circular window looking out over a sandy beach" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmYK1dILaTgLfW4hgma8D2InZCqFbGD9ALGyTcsWBHUoTC5TgkhzeCMvmZfCIu8MaJS8e9Zw8aX9AeK7NtdWrD4Xki8QzfTMoeNJAtlurhqnlsCe1GOfzkNUH-jjZGROG8LNNGef8QS8ucgsDFBlkQawSbR3UN2SfgpcM0PyLZdqVXI1JhF8CtfKQczvRZvAkmsTrLi8Ucw9gPY1Nl29z2b83D5fOIqO0Dl_Ix-jn3I7MeashDqYoU8lmWePvEVun9_OFjMooUvBU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full flex justify-between items-end">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Aldeburgh</span>
+<h3 class="text-3xl font-headline text-white mb-2">The Lookout</h3>
+<p class="text-white/70 font-light max-w-sm mb-6">Breathtaking panoramic sea views from every room.</p>
+<button class="bg-white text-black px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors">View Details</button>
+</div>
+<div class="text-right text-white">
+<span class="block text-xs uppercase tracking-widest opacity-60">From</span>
+<span class="text-2xl font-headline">£380<small class="text-sm">/night</small></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Suffolk Experience: Heritage Overlay -->
+<section class="py-40 px-12 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-24">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<img alt="Coastal Life" class="relative z-10 w-full h-[600px] object-cover rounded-sm" data-alt="Couple walking along a deserted pebbled beach at dawn with soft orange light hitting the shoreline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXQlLnsxU6sQZjFkExLhFT3B5D__Cn0nNArAW5rb_Ip4Qd00PxxPpd3iYbd-pyx41BkZbRilxp63ZS1IYlL3AitvHmNwCmvRvFW69rx5Zm6DiY22z23XfHDZ-FI9lnB9mCzppojDAgxJm5jTbQV8bGZZq7FjfUfupoSPlFFrvZ9l_iv6QP-U4vngOrsV8VVARKGh2xXJ7fPRhSqJ5CSbXcfN47E3VXDtqALt4hweAxML_Eq551epIDAQ59NHSO5cHsUii-AYu1WOU"/>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6 block">Coastal Lifestyle</span>
+<h2 class="text-5xl md:text-7xl font-headline leading-none mb-10 -ml-0 md:-ml-32 relative z-20">The Suffolk Experience</h2>
+<div class="space-y-6 text-lg font-light text-on-surface-variant leading-relaxed max-w-lg">
+<p>Suffolk is more than a destination; it's a feeling of timelessness. From the haunting beauty of Dunwich Heath to the vibrant arts scene at Snape Maltings, every mile tells a story.</p>
+<p>Spend your mornings sourcing local oysters, your afternoons lost in ancient pine forests, and your evenings by a crackling fire in one of our curated homes.</p>
+<button class="pt-8 flex items-center gap-4 text-primary font-bold uppercase tracking-widest text-xs hover:gap-6 transition-all group">
+                        Discover the Local Guide 
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Slider -->
+<section class="py-32 px-12 bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto text-center">
+<div class="mb-16">
+<span class="text-primary text-5xl opacity-30 font-serif">“</span>
+<p class="text-3xl md:text-4xl font-headline leading-snug italic text-on-background">An absolutely breathtaking stay. The attention to detail in Sea Glass Cottage was unlike any rental we've ever visited. The welcome hamper was the perfect touch.</p>
+<div class="mt-8 flex justify-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="mt-4 text-sm font-bold uppercase tracking-widest text-on-surface">Eleanor &amp; James, London</h4>
+</div>
+<div class="flex justify-center gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-24 px-12 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-md">
+<h2 class="text-3xl font-headline mb-4">Get Exclusive Offers</h2>
+<p class="text-on-surface-variant font-light">Join our inner circle for seasonal guides and private offers on new collection additions.</p>
+</div>
+<div class="w-full md:w-auto flex flex-col md:flex-row gap-4">
+<input class="bg-surface-container-lowest border-outline-variant focus:border-primary focus:ring-0 px-8 py-4 w-full md:w-80 rounded-sm" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-on-primary-container px-10 py-4 font-bold uppercase tracking-widest text-xs rounded-sm hover:opacity-90">Subscribe</button>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+<div>
+<span class="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6 block">Get in Touch</span>
+<h2 class="text-5xl font-headline mb-8">Plan Your Escape</h2>
+<p class="text-on-surface-variant text-lg font-light leading-relaxed mb-12">Whether you need help choosing a property or want to arrange a private chef for your arrival, our concierge team is here to assist.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="font-medium">+44 (0) 1728 456 789</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="font-medium">concierge@suffolkholidayhomes.com</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 rounded-sm">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Your Name</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary p-4 rounded-sm" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary p-4 rounded-sm" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">How can we help?</label>
+<textarea class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary p-4 rounded-sm" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-5 font-bold uppercase tracking-widest text-xs hover:opacity-90 transition-all rounded-sm">Send Enquiry</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#131313] border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-headline text-[#ffdb5c]"><img alt="Suffolk Holiday Homes Logo" class="h-10 w-auto object-contain mb-6" src="https://lh3.googleusercontent.com/aida/ADBb0uhJUlkwKIJ8aW2p_F2sgRE0GH-sQyFIgLmUCZ2dyDXbo4nlWsYYgI-g81qoxgoPKkMcuKBkkyXXRv1dlyf2AZ-NQ3umUrJfDLoMRxU5BugeQDEoBbu9yfECvI5AjY1IrPt0UYgzuq0stN4JYD6qrAGqqOPt8XV8dTvmBdH9ESQLSQKrbRQYx0bNDE_rfHquDfUwvmrJkdBx1_5Z0uKq17frL7a1e2mZENHAFHSXLbSgDlaUmX4kbcoqCvktak_Qs_CdFoBHd8z0"/></div>
+<p class="text-white/60 font-body text-sm leading-relaxed">Curating the finest coastal escapes across the Suffolk heritage coast.</p>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold uppercase tracking-widest text-[10px]">The Collection</h4>
+<ul class="space-y-2">
+<li><a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Beachfront Houses</a></li>
+<li><a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Dog Friendly Stays</a></li>
+<li><a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Luxury Barns</a></li>
+<li><a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Large Group Villas</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold uppercase tracking-widest text-[10px]">Explore</h4>
+<ul class="space-y-2">
+<li><a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Sustainability</a></li>
+<li><a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Press Inquiries</a></li>
+<li><a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold uppercase tracking-widest text-[10px]">Follow Us</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">camera</span>
+</a>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-white/5 text-center">
+<p class="text-white/40 text-[10px] uppercase tracking-[0.2em]">© 2024 Suffolk Holiday Homes. Curated Coastal Luxury.</p>
+</div>
+</footer>
+</body></html>
