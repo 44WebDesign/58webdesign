@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pavilion Auto Services | MOT &amp; Servicing Felixstowe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: oklch(52% 0.22 22);
+    --red-glow: oklch(52% 0.22 22 / 0.3);
+    --red-dark: oklch(36% 0.18 22);
+    --blue: oklch(40% 0.10 240);
+    --blue-deep: oklch(16% 0.06 240);
+    --blue-mid: oklch(24% 0.08 240);
+    --blue-surface: oklch(20% 0.07 240);
+    --blue-raised: oklch(26% 0.08 240);
+    --white: oklch(96% 0.004 240);
+    --muted: oklch(58% 0.04 240);
+    --border: oklch(32% 0.06 240);
+    --accent-line: oklch(52% 0.22 22);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Work Sans', sans-serif;
+    background: var(--blue-deep);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    background: var(--blue-surface);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .topbar a { color: var(--white); text-decoration: none; }
+  .topbar a:hover { color: var(--red); }
+
+  .topbar-right { display: flex; gap: 28px; align-items: center; }
+
+  /* NAV */
+  nav {
+    background: var(--blue-mid);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+  }
+
+  .logo-emblem {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .logo-emblem svg { width: 26px; height: 26px; fill: var(--red); }
+
+  .logo-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  .logo-name small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+  }
+
+  .nav-links a {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+  }
+
+  .nav-links a:hover {
+    color: var(--white);
+    border-color: var(--border);
+  }
+
+  .nav-cta-btn {
+    background: var(--red) !important;
+    color: var(--white) !important;
+    border-color: var(--red) !important;
+    padding: 8px 24px !important;
+  }
+
+  .nav-cta-btn:hover { background: var(--red-dark) !important; border-color: var(--red-dark) !important; }
+
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 460px 80px;
+    min-height: calc(100vh - 116px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 30% 50%, oklch(40% 0.10 240 / 0.3), transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    filter: grayscale(100%);
+  }
+
+  .hero-content {
+    padding: 80px 5vw 80px 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .eyebrow-line {
+    width: 40px;
+    height: 2px;
+    background: var(--red);
+  }
+
+  .eyebrow-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+
+  .hero h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: clamp(52px, 7vw, 88px);
+    line-height: 0.94;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 .highlight {
+    color: var(--red);
+    display: block;
+    font-size: 1.1em;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 500px;
+    line-height: 1.75;
+    margin-bottom: 52px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .btn-red {
+    background: var(--red);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 15px 36px;
+    border: 2px solid var(--red);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.15s;
+  }
+
+  .btn-red:hover { background: transparent; color: var(--red); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 15px 36px;
+    border: 2px solid var(--border);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.15s;
+  }
+
+  .btn-outline:hover { border-color: var(--white); }
+
+  .hero-badges {
+    display: flex;
+    gap: 0;
+  }
+
+  .badge-item {
+    padding: 16px 28px;
+    border: 1px solid var(--border);
+    margin-right: -1px;
+    text-align: center;
+  }
+
+  .badge-num {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--white);
+    line-height: 1;
+    display: block;
+  }
+
+  .badge-label {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    display: block;
+    margin-top: 3px;
+  }
+
+  /* FORM PANEL */
+  .hero-form-panel {
+    background: var(--blue-surface);
+    border-left: 1px solid var(--border);
+    padding: 56px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-form-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--red);
+  }
+
+  .panel-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+
+  .panel-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .f-group {
+    margin-bottom: 16px;
+  }
+
+  .f-group label {
+    display: block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .f-group input,
+  .f-group select,
+  .f-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    background: var(--blue-mid);
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: border-color 0.15s;
+  }
+
+  .f-group input:focus,
+  .f-group select:focus {
+    border-color: var(--red);
+  }
+
+  .f-group select option { background: var(--blue-mid); }
+
+  .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 2px solid var(--red);
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .submit-btn:hover { background: transparent; }
+
+  .form-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 100px 5vw;
+    background: var(--blue-deep);
+  }
+
+  .sec-tag {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sec-tag::before { content: '//'; opacity: 0.5; }
+
+  .sec-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: clamp(40px, 5vw, 60px);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    margin-bottom: 60px;
+  }
+
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+  }
+
+  .svc {
+    padding: 40px;
+    border: 1px solid var(--border);
+    margin: -1px 0 0 -1px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+  }
+
+  .svc:hover { background: var(--blue-surface); }
+
+  .svc-icon {
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  .svc-icon svg { width: 26px; height: 26px; fill: var(--red); }
+
+  .svc-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .svc-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .svc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  /* STATS BAND */
+  .stats-band {
+    background: var(--blue-surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 64px 5vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .stat-cell {
+    text-align: center;
+    padding: 0 40px;
+    border-right: 1px solid var(--border);
+  }
+
+  .stat-cell:last-child { border-right: none; }
+
+  .stat-n {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: clamp(52px, 6vw, 72px);
+    color: var(--red);
+    line-height: 1;
+    display: block;
+  }
+
+  .stat-l {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* WHY US */
+  .why-section {
+    padding: 100px 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .why-left img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%) contrast(1.1);
+    border: 1px solid var(--border);
+  }
+
+  .why-right .sec-title { margin-bottom: 32px; font-size: clamp(36px, 4vw, 52px); }
+
+  .why-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .why-item {
+    display: grid;
+    grid-template-columns: 3px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+  }
+
+  .why-item:last-child { border-bottom: none; }
+
+  .why-line { background: var(--red); height: 100%; width: 3px; }
+
+  .why-body h4 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .why-body p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    background: var(--blue-surface);
+    padding: 100px 5vw;
+    border-top: 1px solid var(--border);
+  }
+
+  .t-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+  }
+
+  .t-header .sec-title { margin-bottom: 0; }
+
+  .t-score {
+    text-align: right;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .t-score-num {
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .t-score-num span { font-size: 22px; color: var(--muted); }
+
+  .t-score-stars { color: var(--red); font-size: 20px; letter-spacing: 2px; }
+
+  .t-score-count { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  .t-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .t-card {
+    background: var(--blue-mid);
+    border: 1px solid var(--border);
+    padding: 36px;
+    position: relative;
+  }
+
+  .t-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--red);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+  }
+
+  .t-card:hover::before { transform: scaleX(1); }
+
+  .t-stars { color: var(--red); font-size: 15px; letter-spacing: 2px; margin-bottom: 20px; }
+
+  .t-quote {
+    font-size: 15px;
+    color: oklch(76% 0.02 240);
+    line-height: 1.75;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .t-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .t-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--red-dark);
+    border: 1px solid var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .t-name { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 15px; color: var(--white); letter-spacing: 0.04em; }
+  .t-loc { font-size: 12px; color: var(--muted); }
+
+  /* CTA STRIP */
+  .cta-strip {
+    background: var(--red);
+    padding: 64px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .cta-text h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: clamp(36px, 5vw, 60px);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .cta-text p { color: oklch(88% 0.06 22); font-size: 16px; margin-top: 10px; }
+
+  .cta-btns { display: flex; gap: 16px; }
+
+  .cta-btn-white {
+    background: var(--white);
+    color: var(--red);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 15px 36px;
+    border: 2px solid var(--white);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.15s;
+  }
+
+  .cta-btn-white:hover { background: transparent; color: var(--white); }
+
+  .cta-btn-border {
+    background: transparent;
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 15px 36px;
+    border: 2px solid oklch(80% 0.1 22);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.15s;
+  }
+
+  .cta-btn-border:hover { border-color: var(--white); }
+
+  /* CONTACT */
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+  }
+
+  .contact-info {
+    background: var(--blue-mid);
+    padding: 80px 5vw;
+    border-right: 1px solid var(--border);
+  }
+
+  .contact-info .sec-title { font-size: 40px; margin-bottom: 40px; }
+
+  .c-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .c-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .c-icon svg { width: 18px; height: 18px; fill: var(--red); }
+
+  .c-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .c-val { font-size: 15px; color: var(--white); text-decoration: none; }
+  .c-val:hover { color: var(--red); }
+
+  .hours-table { margin-top: 32px; }
+
+  .h-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+
+  .h-day { color: var(--muted); }
+  .h-time { color: var(--white); font-weight: 500; }
+
+  .contact-map {
+    position: relative;
+    min-height: 400px;
+  }
+
+  .contact-map iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(60%) invert(90%);
+    opacity: 0.7;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--blue-surface);
+    border-top: 1px solid var(--border);
+    padding: 40px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .f-brand {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--white);
+  }
+
+  .f-brand span { color: var(--red); }
+
+  .f-copy { font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+  .f-links { display: flex; gap: 24px; }
+
+  .f-links a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .f-links a:hover { color: var(--red); }
+
+  /* ── Hamburger nav ── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    transition: all 0.2s;
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--blue-surface);
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-nav a:last-child { border-bottom: none; color: var(--white); background: var(--red); }
+
+  /* ── Tablet (≤1024px) ── */
+  @media (max-width: 1024px) {
+    .hero { grid-template-columns: 1fr 400px 40px; }
+    .hero-content { padding: 60px 4vw; }
+    .hero-form-panel { padding: 44px 32px; }
+    .stats-band { grid-template-columns: repeat(2, 1fr); }
+    .stat-cell { border-right: none; border-bottom: 1px solid var(--border); padding: 32px 0; }
+    .stat-cell:nth-child(odd) { border-right: 1px solid var(--border); }
+    .stat-cell:last-child, .stat-cell:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+    .why-section { grid-template-columns: 1fr; gap: 40px; }
+    .why-left img { height: 360px; }
+    .services-list { grid-template-columns: repeat(2, 1fr); }
+    .t-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-section { grid-template-columns: 1fr; }
+    .topbar { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .cta-strip { flex-direction: column; gap: 24px; }
+  }
+
+  /* ── Mobile (≤768px) ── */
+  @media (max-width: 768px) {
+    .topbar { display: none; }
+    nav { padding: 0 16px; height: 64px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero > div:last-child { display: none; }
+    .hero-content { padding: 48px 20px 40px; }
+    .hero h1 { font-size: 52px; }
+    .hero-desc { font-size: 15px; }
+    .hero-actions { flex-direction: column; }
+    .btn-red, .btn-outline { width: 100%; text-align: center; }
+    .hero-badges { flex-wrap: wrap; }
+    .badge-item { flex: 1 1 calc(50% - 1px); }
+    .hero-form-panel { padding: 36px 20px; border-left: none; border-top: 3px solid var(--red); }
+    .f-row { grid-template-columns: 1fr; }
+
+    .services { padding: 60px 20px; }
+    .services-list { grid-template-columns: 1fr; }
+    .sec-title { font-size: 36px; }
+    .svc { padding: 28px 24px; }
+
+    .stats-band { grid-template-columns: repeat(2, 1fr); padding: 48px 20px; }
+    .stat-cell { padding: 24px 12px; }
+    .stat-n { font-size: 44px; }
+
+    .why-section { padding: 60px 20px; grid-template-columns: 1fr; }
+    .why-left img { height: 240px; }
+
+    .testimonials { padding: 60px 20px; }
+    .t-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .t-grid { grid-template-columns: 1fr; }
+    .t-card { padding: 24px; }
+
+    .cta-strip { padding: 48px 20px; flex-direction: column; gap: 24px; }
+    .cta-text h2 { font-size: 36px; }
+    .cta-btns { flex-direction: column; width: 100%; }
+    .cta-btn-white, .cta-btn-border { width: 100%; text-align: center; }
+
+    .contact-section { grid-template-columns: 1fr; }
+    .contact-info { padding: 48px 20px; }
+    .contact-info .sec-title { font-size: 32px; }
+    .contact-map { min-height: 280px; }
+
+    footer { flex-direction: column; align-items: flex-start; padding: 32px 20px; gap: 20px; }
+    .f-links { flex-wrap: wrap; gap: 12px; }
+  }
+
+  /* ── Small mobile (≤400px) ── */
+  @media (max-width: 400px) {
+    .hero h1 { font-size: 40px; }
+    .stats-band { grid-template-columns: 1fr; }
+    .stat-cell { border-right: none !important; }
+    .badge-item { flex: 1 1 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Tollgate Service Station, 349 High Street, Felixstowe IP11 9QN</span>
+  <div class="topbar-right">
+    <span>Mon–Fri: 8:30am – 5:00pm</span>
+    <a href="tel:01394283245">01394 283245</a>
+    <a href="mailto:enq@paviliongarage.co.uk">enq@paviliongarage.co.uk</a>
+  </div>
+</div>
+
+<nav>
+  <a class="logo-wrap" href="#">
+    <div class="logo-emblem">
+      <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+    </div>
+    <div class="logo-name">
+      Pavilion Auto<span style="color:var(--red)">.</span>
+      <small>MOT &amp; Servicing · Felixstowe</small>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#booking" class="nav-cta-btn">Book Now</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger2" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav2">
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="#booking">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="booking">
+  <img class="hero-bg-img" src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1600&q=80" alt="">
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <div class="eyebrow-text">DVSA Approved MOT Testing Station</div>
+    </div>
+
+    <h1>Felixstowe's<br><span class="highlight">Trusted</span><br>Garage</h1>
+
+    <p class="hero-desc">Over 20 years of honest, expert automotive care. MOT testing, servicing, and repairs for all makes and models — at prices that don't surprise you.</p>
+
+    <div class="hero-actions">
+      <a href="#booking" class="btn-red">Book Online</a>
+      <a href="tel:01394283245" class="btn-outline">01394 283245</a>
+    </div>
+
+    <div class="hero-badges">
+      <div class="badge-item">
+        <span class="badge-num">20+</span>
+        <span class="badge-label">Years trading</span>
+      </div>
+      <div class="badge-item">
+        <span class="badge-num">All</span>
+        <span class="badge-label">Makes &amp; models</span>
+      </div>
+      <div class="badge-item">
+        <span class="badge-num">5★</span>
+        <span class="badge-label">Customer rating</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-form-panel">
+    <div class="panel-title">Book Your MOT or Service</div>
+    <div class="panel-sub">We'll confirm your appointment within 2 hours</div>
+
+    <div class="f-group">
+      <label>Service Type</label>
+      <select>
+        <option value="">Select a service…</option>
+        <option>MOT Test (Class IV)</option>
+        <option>Full Service</option>
+        <option>Interim Service</option>
+        <option>Vehicle Repair</option>
+        <option>MOT + Service Combined</option>
+        <option>Diagnostics</option>
+      </select>
+    </div>
+
+    <div class="f-row">
+      <div class="f-group">
+        <label>First Name</label>
+        <input type="text" placeholder="John">
+      </div>
+      <div class="f-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Smith">
+      </div>
+    </div>
+
+    <div class="f-group">
+      <label>Reg. Plate</label>
+      <input type="text" placeholder="AB12 CDE" style="font-weight:600; letter-spacing:0.06em; text-transform:uppercase;">
+    </div>
+
+    <div class="f-group">
+      <label>Phone</label>
+      <input type="tel" placeholder="01394…">
+    </div>
+
+    <div class="f-row">
+      <div class="f-group">
+        <label>Date</label>
+        <input type="date">
+      </div>
+      <div class="f-group">
+        <label>Time</label>
+        <select>
+          <option>8:30 AM</option>
+          <option>9:30 AM</option>
+          <option>10:30 AM</option>
+          <option>11:30 AM</option>
+          <option>1:00 PM</option>
+          <option>2:00 PM</option>
+          <option>3:00 PM</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="submit-btn">
+      Request Booking
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+    </button>
+    <div class="form-note">No spam. Free reminders included with every booking.</div>
+  </div>
+  <div style="background: var(--blue-deep);"></div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="sec-tag">What We Offer</div>
+  <div class="sec-title">Our Services</div>
+
+  <div class="services-list">
+    <div class="svc">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <div class="svc-name">MOT Testing</div>
+      <p class="svc-desc">Class IV MOT testing for cars, dual purpose vehicles, and vans up to 3000kg. DVSA approved with experienced testers and full digital reporting.</p>
+      <a href="#booking" class="svc-link">Book MOT →</a>
+    </div>
+    <div class="svc">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M13.78 15.3L19.78 21.3L21.89 19.14L15.89 13.14L13.78 15.3M17.5 11.1C16.92 11.1 16.31 11 15.76 10.79L5.9 20.65L3.35 18.1C3.74 17.71 3.74 17.07 3.35 16.68L2.64 17.39L1.56 16.31L5.55 12.32C5.34 11.77 5.23 11.16 5.23 10.58C5.23 7.64 7.6 5.27 10.54 5.27C11.12 5.27 11.73 5.38 12.28 5.59L9.04 8.83L10.73 10.52L14 7.28C14.21 7.83 14.32 8.44 14.32 9.02C14.32 9.6 14.21 10.21 14 10.76L15.89 12.65C16.44 12.86 17.05 12.97 17.63 12.97L17.5 11.1Z"/></svg>
+      </div>
+      <div class="svc-name">Vehicle Servicing</div>
+      <p class="svc-desc">Full and interim servicing for all makes and models. Oil, filters, brakes, and fluids — all work is recorded in your vehicle's service book.</p>
+      <a href="#booking" class="svc-link">Book Service →</a>
+    </div>
+    <div class="svc">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+      </div>
+      <div class="svc-name">Vehicle Repairs</div>
+      <p class="svc-desc">Mechanical repairs across all makes and models. You only receive the work your vehicle needs — no unnecessary upselling, ever.</p>
+      <a href="#booking" class="svc-link">Book Repair →</a>
+    </div>
+    <div class="svc">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+      </div>
+      <div class="svc-name">Diagnostics</div>
+      <p class="svc-desc">Modern diagnostic equipment to identify electrical and mechanical faults quickly and accurately before any work commences.</p>
+      <a href="#booking" class="svc-link">Book Diagnostics →</a>
+    </div>
+    <div class="svc">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div class="svc-name">Collection &amp; Delivery</div>
+      <p class="svc-desc">We collect and return your vehicle by prior arrangement across Felixstowe and surrounding areas. Just £35 + VAT for ultimate convenience.</p>
+      <a href="#contact" class="svc-link">Enquire →</a>
+    </div>
+    <div class="svc">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </div>
+      <div class="svc-name">Free Reminders</div>
+      <p class="svc-desc">Stay road-legal without the worry. We send free MOT and service reminders so you never miss a deadline. Included with every booking.</p>
+      <a href="#booking" class="svc-link">Sign Up →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stat-cell">
+    <span class="stat-n" data-target="20">20+</span>
+    <span class="stat-l">Years in Felixstowe</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-n" data-target="3500">3,500+</span>
+    <span class="stat-l">MOTs per year</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-n" data-target="98">98%</span>
+    <span class="stat-l">Customer satisfaction</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-n" data-target="100">100%</span>
+    <span class="stat-l">Transparent pricing</span>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="why-section" id="about">
+  <div class="why-left">
+    <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=700&q=80" alt="Technician working at Pavilion Auto Services">
+  </div>
+  <div class="why-right">
+    <div class="sec-tag">Why Choose Us</div>
+    <div class="sec-title">Built on<br>Trust</div>
+    <div class="why-items">
+      <div class="why-item">
+        <div class="why-line"></div>
+        <div class="why-body">
+          <h4>Word-of-Mouth Reputation</h4>
+          <p>The majority of our new customers come via personal recommendations. That says more than any advertisement could.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-line"></div>
+        <div class="why-body">
+          <h4>No Unnecessary Work</h4>
+          <p>Our experienced technicians tell you exactly what your vehicle needs — and nothing more. Integrity, every time.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-line"></div>
+        <div class="why-body">
+          <h4>Fully Qualified Testers</h4>
+          <p>Our MOT testers are DVSA qualified with years of hands-on experience across all vehicle types and makes.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-line"></div>
+        <div class="why-body">
+          <h4>Competitive Pricing</h4>
+          <p>Premium quality servicing at fair, competitive rates. No hidden charges, no surprises — ever.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="t-header">
+    <div>
+      <div class="sec-tag">Customer Reviews</div>
+      <div class="sec-title">What People Say</div>
+    </div>
+    <div class="t-score">
+      <div class="t-score-num">4.9<span>/5</span></div>
+      <div class="t-score-stars">★★★★★</div>
+      <div class="t-score-count">200+ verified reviews</div>
+    </div>
+  </div>
+
+  <div class="t-grid">
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">Brilliant from start to finish. They phoned before doing any additional work and the price was exactly what was quoted. Will never go anywhere else.</p>
+      <div class="t-person">
+        <div class="t-avatar">SM</div>
+        <div>
+          <div class="t-name">Sarah M.</div>
+          <div class="t-loc">Felixstowe · 6-year customer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">Used their collection service and it was faultless. They picked up the car, serviced it, and had it back before I needed it. Genuine five-star experience.</p>
+      <div class="t-person">
+        <div class="t-avatar">JB</div>
+        <div>
+          <div class="t-name">James B.</div>
+          <div class="t-loc">Ipswich · Regular customer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">Honest, fast, and professional. Another garage wanted to charge me for parts that weren't needed. Pavilion told me the truth and saved me a lot of money.</p>
+      <div class="t-person">
+        <div class="t-avatar">LT</div>
+        <div>
+          <div class="t-name">Linda T.</div>
+          <div class="t-loc">Trimley · 3-year customer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="cta-text">
+    <h2>Book Your MOT<br>or Service Today</h2>
+    <p>Felixstowe's most trusted garage — one call away.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="#booking" class="cta-btn-white">Book Online</a>
+    <a href="tel:01394283245" class="cta-btn-border">01394 283245</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-info">
+    <div class="sec-tag">Find Us</div>
+    <div class="sec-title">Visit The Garage</div>
+
+    <div class="c-detail">
+      <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+      <div>
+        <div class="c-label">Address</div>
+        <div class="c-val">Tollgate Service Station, 349 High Street<br>Felixstowe, Suffolk IP11 9QN</div>
+      </div>
+    </div>
+
+    <div class="c-detail">
+      <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+      <div>
+        <div class="c-label">Phone</div>
+        <a href="tel:01394283245" class="c-val">01394 283245 / 672020 / 283925</a>
+      </div>
+    </div>
+
+    <div class="c-detail">
+      <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div>
+        <div class="c-label">Email</div>
+        <a href="mailto:enq@paviliongarage.co.uk" class="c-val">enq@paviliongarage.co.uk</a>
+      </div>
+    </div>
+
+    <div class="hours-table">
+      <div class="sec-tag" style="margin-top: 8px;">Opening Hours</div>
+      <div class="h-row"><span class="h-day">Monday – Friday</span><span class="h-time">8:30 am – 5:00 pm</span></div>
+      <div class="h-row"><span class="h-day">Saturday</span><span class="h-time" style="color:var(--muted)">Closed</span></div>
+      <div class="h-row"><span class="h-day">Sunday</span><span class="h-time" style="color:var(--muted)">Closed</span></div>
+    </div>
+  </div>
+
+  <div class="contact-map">
+    <iframe src="https://maps.google.com/maps?q=349+High+Street+Felixstowe+IP11+9QN&output=embed" loading="lazy" allowfullscreen></iframe>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="f-brand">Pavilion Auto<span>.</span> Services Ltd</div>
+    <div class="f-copy">© 2026 Pavilion Auto Services Ltd. 349 High Street, Felixstowe IP11 9QN. Registered in England &amp; Wales.</div>
+  </div>
+  <div class="f-links">
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">FAQ</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy</a>
+  </div>
+</footer>
+
+<script>
+  const counters = document.querySelectorAll('.stat-n[data-target]');
+
+  const animate = (el) => {
+    const target = parseInt(el.dataset.target);
+    const suffix = el.textContent.replace(/[\d,]/g, '');
+    let current = 0;
+    const duration = 1400;
+    const steps = 60;
+    const increment = target / steps;
+    const timer = setInterval(() => {
+      current = Math.min(current + increment, target);
+      const val = current >= 1000 ? Math.round(current).toLocaleString() : Math.round(current);
+      el.textContent = val + suffix;
+      if (current >= target) clearInterval(timer);
+    }, duration / steps);
+  };
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { animate(e.target); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.4 });
+
+  counters.forEach(c => obs.observe(c));
+
+  document.getElementById('hamburger2').addEventListener('click', () => {
+    document.getElementById('mobileNav2').classList.toggle('open');
+  });
+  document.querySelectorAll('#mobileNav2 a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobileNav2').classList.remove('open'));
+  });
+</script>
+</body>
+</html>
